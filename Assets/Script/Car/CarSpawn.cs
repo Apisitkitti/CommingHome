@@ -43,7 +43,6 @@ public class CarSpawn : MonoBehaviour
 
   void carSpawn()
   {
-
     for (int spawnerNumber = 0; spawnerNumber < carSpawner.Count; spawnerNumber++)
     {
       var plsSpawn = carSpawnTime() ? Instantiate(carPrefab, carSpawner[spawnerNumber].position, carSpawner[spawnerNumber].rotation) : null;
