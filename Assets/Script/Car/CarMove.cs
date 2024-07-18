@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class CarMove : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  [SerializeField] float carSpeed = 0f;
+  [SerializeField] Rigidbody rb;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  void Start()
+  {
+    rb = GetComponent<Rigidbody>();
+  }
+  void Update()
+  {
+    rb.velocity = transform.forward * carSpeed * Time.deltaTime;
+  }
+
 }
