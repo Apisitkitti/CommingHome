@@ -6,8 +6,9 @@ using UnityEngine;
 public class CarSpawn : MonoBehaviour
 {
   [Header("Spawn")]
-  [SerializeField] Transform carSpawner;
+  [SerializeField] List<Transform> carSpawner;
   [SerializeField] GameObject carPrefab;
+
 
   #region ForSetSpawnCar
   [Header("CarSpawnSetting")]
@@ -43,7 +44,12 @@ public class CarSpawn : MonoBehaviour
 
   void carSpawn()
   {
-    var plsSpawn = carSpawnTime() ? Instantiate(carPrefab, carSpawner.position, carSpawner.rotation) : null;
+
+    for (int spawnerNumber = 0; spawnerNumber < carSpawner.Count; spawnerNumber++)
+    {
+      var plsSpawn = carSpawnTime() ? Instantiate(carPrefab, carSpawner[spawnerNumber].position, carSpawner[spawnerNumber].rotation) : null;
+    }
+
   }
   float resetTime()
   {
