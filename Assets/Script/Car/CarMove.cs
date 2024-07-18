@@ -16,5 +16,11 @@ public class CarMove : MonoBehaviour
   {
     rb.velocity = transform.forward * carSpeed * Time.deltaTime;
   }
-
+  void OnCollisionEnter(Collision col)
+  {
+    if (col.gameObject.tag == "Player")
+    {
+      Destroy(col.gameObject);
+    }
+  }
 }
