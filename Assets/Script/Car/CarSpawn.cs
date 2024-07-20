@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 
 public class CarSpawn : MonoBehaviour
@@ -8,7 +9,8 @@ public class CarSpawn : MonoBehaviour
   [Header("Spawn")]
   [SerializeField] List<Transform> carSpawner;
   [SerializeField] GameObject carPrefab;
-
+  [SerializeField] List<GameObject> carThatSpawn;
+  int spawnerNumber = 0;
 
   #region ForSetSpawnCar
   [Header("CarSpawnSetting")]
@@ -36,16 +38,21 @@ public class CarSpawn : MonoBehaviour
     }
     else
     {
-      currentTime -= 1 * Time.deltaTime;
+      currentTime -= Time.deltaTime;
       return false;
     }
   }
 
   void carSpawn()
   {
-    for (int spawnerNumber = 0; spawnerNumber < carSpawner.Count; spawnerNumber++)
+    if (carSpawnTime())
     {
-      var plsSpawn = carSpawnTime() ? Instantiate(carPrefab, carSpawner[spawnerNumber].position, carSpawner[spawnerNumber].rotation) : null;
+      carForCheck(spawnerNumber);
+      spawnerNumber++;
+    }
+    if (spawnerNumber > carSpawner.Count - 1)
+    {
+      spawnerNumber = 0;
     }
 
   }
@@ -54,4 +61,10 @@ public class CarSpawn : MonoBehaviour
     currentTime = spawnTimeSetting;
     return currentTime;
   }
+  void carForCheck(int spawnerNumber)
+  {
+    GameObject carSpawn = Instantiate(carPrefab, carSpawner[spawnerNumber].position, carSpawner[spawnerNumber].rotation);
+    carThatSpawn.Add(carSpawn);
+  }
 }
+
