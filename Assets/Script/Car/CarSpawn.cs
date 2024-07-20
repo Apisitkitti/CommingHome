@@ -47,7 +47,7 @@ public class CarSpawn : MonoBehaviour
   {
     if (carSpawnTime())
     {
-      carForCheck(spawnerNumber);
+      carSpawnAndAddList(spawnerNumber);
       spawnerNumber++;
     }
     if (spawnerNumber > carSpawner.Count - 1)
@@ -61,7 +61,7 @@ public class CarSpawn : MonoBehaviour
     currentTime = spawnTimeSetting;
     return currentTime;
   }
-  void carForCheck(int spawnerNumber)
+  void carSpawnAndAddList(int spawnerNumber)
   {
     GameObject carSpawn = Instantiate(carPrefab, carSpawner[spawnerNumber].position, carSpawner[spawnerNumber].rotation);
     carThatSpawn.Add(carSpawn);
