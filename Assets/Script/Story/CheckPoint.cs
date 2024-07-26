@@ -6,12 +6,15 @@ using TMPro;
 public class CheckPoint : MonoBehaviour
 {
   [SerializeField] TMP_Text storyText;
-  [SerializeField] string[] lines;
+  [SerializeField] string lines;
   [SerializeField] float textSpeed;
-  [SerializeField]
-  bool isHit = false;
+  [SerializeField] bool isHit = false;
   private int index;
-  void OnTriggerEnter(Collider col)
+  void Start()
+  {
+    storyText.text = string.Empty;
+  }
+  void OnCollisionEnter(Collision col)
   {
     if (col.gameObject.tag == "Player")
     {
@@ -23,10 +26,11 @@ public class CheckPoint : MonoBehaviour
   {
     index = 0;
     StartCoroutine(typeLine());
+
   }
   IEnumerator typeLine()
   {
-    foreach (char charcterInConversation in lines[index].ToCharArray())
+    foreach (char charcterInConversation in lines)
     {
       storyText.text += charcterInConversation;
       yield return new WaitForSeconds(textSpeed);
