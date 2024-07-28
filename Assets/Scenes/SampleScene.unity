@@ -987,7 +987,7 @@ GameObject:
   - component: {fileID: 458464255}
   - component: {fileID: 458464254}
   - component: {fileID: 458464253}
-  - component: {fileID: 458464252}
+  - component: {fileID: 458464256}
   m_Layer: 0
   m_Name: Dialogue
   m_TagString: Untagged
@@ -995,22 +995,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &458464252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 458464251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edd70cff343be864382a935cc200e17a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  storyText: {fileID: 1953052986}
-  lines: test test
-  textSpeed: 1
-  isHit: 0
 --- !u!54 &458464253
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1074,6 +1058,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &458464256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458464251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd70cff343be864382a935cc200e17a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  story: {fileID: 1292798491}
 --- !u!1001 &499228116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1803,13 +1800,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1292798489}
   - component: {fileID: 1292798490}
+  - component: {fileID: 1292798491}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1292798489
 Transform:
   m_ObjectHideFlags: 0
@@ -1845,6 +1843,22 @@ MonoBehaviour:
   carThatSpawn: []
   spawnTimeSetting: 5
   currentTime: 0
+--- !u!114 &1292798491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292798488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad74d567a197660439210c5c3b460a39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storyText: {fileID: 1953052986}
+  checkPoint: {fileID: 458464251}
+  lines: test test test
+  textSpeed: 1
 --- !u!1 &1337159701
 GameObject:
   m_ObjectHideFlags: 0
