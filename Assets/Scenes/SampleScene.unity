@@ -752,6 +752,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 888182881}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -7842741407935324952, guid: 7cbee7ee6bc5c3b4b8c8bdb58db3b2a5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1400045929}
     - targetCorrespondingSourceObject: {fileID: -7065243615992654741, guid: 7cbee7ee6bc5c3b4b8c8bdb58db3b2a5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 537503220}
@@ -2472,11 +2475,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.48000002, y: 0.0017129844, z: 0.07}
   m_Center: {x: -0.000000007450581, y: 0, z: 0.0000000018626451}
+--- !u!1 &1400045925 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7842741407935324952, guid: 7cbee7ee6bc5c3b4b8c8bdb58db3b2a5, type: 3}
+  m_PrefabInstance: {fileID: 302755035}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1400045926 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8469174506765179718, guid: 7cbee7ee6bc5c3b4b8c8bdb58db3b2a5, type: 3}
   m_PrefabInstance: {fileID: 302755035}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1400045929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400045925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3afbfb58ea90ec540817bc400c7c30ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightBulb:
+  - {fileID: 2137417398}
+  - {fileID: 259084438}
+  - {fileID: 888182883}
+  color:
+  - {fileID: 2100000, guid: cf00b4f0f72533f41b61c7f1f97cf13a, type: 2}
+  - {fileID: 2100000, guid: 76fdb6eb13227be4db56e679267608db, type: 2}
+  - {fileID: 2100000, guid: 0828ecbdd455e764f9b318a0236da73e, type: 2}
+  - {fileID: 2100000, guid: a25ec9498f04c2c49b6f9e23198a53da, type: 2}
+  changeLight: 3
 --- !u!1 &1510752904 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1557001388350188847, guid: ac525908545a22248b44f48c2a882430, type: 3}
