@@ -16,6 +16,7 @@ public class CarSpawn : MonoBehaviour
   [Header("CarSpawnSetting")]
   [SerializeField] float spawnTimeSetting = 0f;
   [SerializeField] float currentTime = 0f;
+  public bool isSpawn = false;
   float timeToSpawn = 0f;
   #endregion
 
@@ -26,8 +27,11 @@ public class CarSpawn : MonoBehaviour
   }
   void Update()
   {
-    carSpawnTime();
-    carSpawn();
+    if (isSpawn)
+    {
+      carSpawnTime();
+      carSpawn();
+    }
   }
   bool carSpawnTime()
   {

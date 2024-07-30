@@ -6,7 +6,10 @@ public class TrafficSignManager : MonoBehaviour
 {
   [SerializeField] List<MeshRenderer> lightBulb;
   [SerializeField] List<Material> color;
-  public int changeLight;
+  [SerializeField] CarSpawn carSpawn;
+  public int changeLightRedToYellow;
+  public int changeLightYellowToGreen;
+  public int changeLightGreenToRed;
   void Start()
   {
     lightBulb[0].material = color[1];
@@ -18,13 +21,15 @@ public class TrafficSignManager : MonoBehaviour
     {
       lightBulb[0].material = color[1];
       lightBulb[2].material = color[0];
-      yield return new WaitForSeconds(changeLight);
+      carSpawn.isSpawn = false;
+      yield return new WaitForSeconds(changeLightRedToYellow);
       lightBulb[0].material = color[0];
       lightBulb[1].material = color[2];
-      yield return new WaitForSeconds(changeLight);
+      yield return new WaitForSeconds(changeLightYellowToGreen);
       lightBulb[1].material = color[0];
       lightBulb[2].material = color[3];
-      yield return new WaitForSeconds(changeLight);
+      carSpawn.isSpawn = true;
+      yield return new WaitForSeconds(changeLightGreenToRed);
     }
   }
 

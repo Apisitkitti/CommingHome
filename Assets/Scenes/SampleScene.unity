@@ -2281,6 +2281,7 @@ MonoBehaviour:
   carThatSpawn: []
   spawnTimeSetting: 5
   currentTime: 0
+  isSpawn: 0
 --- !u!114 &1292798491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2506,7 +2507,10 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 76fdb6eb13227be4db56e679267608db, type: 2}
   - {fileID: 2100000, guid: 0828ecbdd455e764f9b318a0236da73e, type: 2}
   - {fileID: 2100000, guid: a25ec9498f04c2c49b6f9e23198a53da, type: 2}
-  changeLight: 3
+  carSpawn: {fileID: 0}
+  changeLightRedToYellow: 1
+  changeLightYellowToGreen: 2
+  changeLightGreenToRed: 3
 --- !u!1 &1510752904 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1557001388350188847, guid: ac525908545a22248b44f48c2a882430, type: 3}
