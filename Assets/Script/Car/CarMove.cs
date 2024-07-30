@@ -20,7 +20,7 @@ public class CarMove : MonoBehaviour
   {
     if (col.gameObject.tag == "Player")
     {
-      Destroy(col.gameObject);
+      Destroy(gameObject);
     }
   }
 }

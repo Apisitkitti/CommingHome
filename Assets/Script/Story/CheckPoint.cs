@@ -7,11 +7,12 @@ public class CheckPoint : MonoBehaviour
 {
   [SerializeField] StoryStart story;
 
-  void OnCollisionEnter(Collision col)
+  void OnTriggerEnter(Collider col)
   {
     if (col.gameObject.tag == "Player")
     {
       story.startDialogue();
+      Destroy(gameObject);
     }
   }
 
