@@ -19,16 +19,17 @@ public class TrafficSignManager : MonoBehaviour
   {
     while (true)
     {
+      carSpawn.isSpawn.Clear();
       lightBulb[0].material = color[1];
       lightBulb[2].material = color[0];
-      carSpawn.isSpawn = false;
+      carSpawn.isSpawn.Add(false);
       yield return new WaitForSeconds(changeLightRedToYellow);
       lightBulb[0].material = color[0];
       lightBulb[1].material = color[2];
       yield return new WaitForSeconds(changeLightYellowToGreen);
       lightBulb[1].material = color[0];
       lightBulb[2].material = color[3];
-      carSpawn.isSpawn = true;
+      carSpawn.isSpawn.Add(true);
       yield return new WaitForSeconds(changeLightGreenToRed);
     }
   }
