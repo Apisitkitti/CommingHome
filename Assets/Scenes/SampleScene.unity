@@ -1342,7 +1342,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582424589}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54674311eeaa97744874eee1bc1a2028, type: 3}
   m_Name: 
@@ -2275,11 +2275,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carSpawner:
   - {fileID: 1185453901}
-  - {fileID: 2071286774}
-  - {fileID: 399951324}
   carPrefab: {fileID: 6658682753545952057, guid: 3552359571cd20b41afbaf95e1f61f36, type: 3}
   carThatSpawn: []
-  spawnTimeSetting: 5
+  spawnTimeSetting: 2
   currentTime: 0
   isSpawn: 0
 --- !u!114 &1292798491
@@ -2507,7 +2505,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 76fdb6eb13227be4db56e679267608db, type: 2}
   - {fileID: 2100000, guid: 0828ecbdd455e764f9b318a0236da73e, type: 2}
   - {fileID: 2100000, guid: a25ec9498f04c2c49b6f9e23198a53da, type: 2}
-  carSpawn: {fileID: 0}
+  carSpawn: {fileID: 1292798490}
   changeLightRedToYellow: 1
   changeLightYellowToGreen: 2
   changeLightGreenToRed: 3
