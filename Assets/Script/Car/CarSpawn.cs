@@ -6,79 +6,79 @@ using UnityEngine;
 
 public class CarSpawn : MonoBehaviour
 {
-    [Header("Spawn")]
-    [SerializeField] List<Transform> carSpawner;
-    [SerializeField] List<GameObject> spawnerGameObject;
-    [SerializeField] GameObject carPrefab;
-    [SerializeField] List<GameObject> carThatSpawn;
-    int spawnerNumber = 0;
-    bool isSpawning = false;
+  [Header("Spawn")]
+  [SerializeField] List<Transform> carSpawner;
+  [SerializeField] List<GameObject> spawnerGameObject;
+  [SerializeField] GameObject carPrefab;
+  [SerializeField] List<GameObject> carThatSpawn;
+  int spawnerNumber = 0;
+  bool isSpawning = false;
 
-    #region ForSetSpawnCar
-    [Header("CarSpawnSetting")]
-    [SerializeField] float spawnTimeSetting = 0f;
-    public List<bool> isSpawn;
+  #region ForSetSpawnCar
+  [Header("CarSpawnSetting")]
+  [SerializeField] float spawnTimeSetting = 0f;
+  public List<bool> isSpawn;
 
-    #endregion
+  #endregion
 
-    void Awake()
+  void Awake()
+  {
+    foreach (Transform spawnerTransform in carSpawner)
     {
-        foreach (Transform spawnerTransform in carSpawner)
+      spawnerGameObject.Add(spawnerTransform.gameObject);
+    }
+  }
+
+  void Start()
+  {
+    spawnObjectSet(false);
+  }
+
+  void Update()
+  {
+    checkWhereToSpawn();
+  }
+
+  public void checkWhereToSpawn()
+  {
+    if (!isSpawning)
+    {
+      foreach (bool isSpawnRequest in isSpawn)
+      {
+        if (isSpawnRequest)
         {
-            spawnerGameObject.Add(spawnerTransform.gameObject);
+          spawnerGameObject[spawnerNumber].SetActive(true);
+          StartCoroutine(carSpawn());
+          spawnerNumber++;
+          if (spawnerNumber >= carSpawner.Count)
+          {
+            spawnerNumber = 0;
+          }
         }
+      }
     }
+  }
 
-    void Start()
-    {
-        spawnObjectSet(false);
-    }
+  IEnumerator carSpawn()
+  {
+    isSpawning = true;
+    carSpawnAndAddList(spawnerNumber);
+    yield return new WaitForSeconds(spawnTimeSetting);
+    isSpawning = false;
+  }
 
-    void Update()
-    {
-        checkWhereToSpawn();
-    }
+  void carSpawnAndAddList(int spawnerNumber)
+  {
+    GameObject carSpawn = Instantiate(carPrefab, carSpawner[spawnerNumber].position, carSpawner[spawnerNumber].rotation);
+    carThatSpawn.Add(carSpawn);
+  }
 
-    public void checkWhereToSpawn()
+  void spawnObjectSet(bool setBool)
+  {
+    for (int spawnCheck = 0; spawnCheck < isSpawn.Count; spawnCheck++)
     {
-        if (!isSpawning)
-        {
-            foreach (bool isSpawnRequest in isSpawn)
-            {
-                if (isSpawnRequest)
-                {
-                    spawnerGameObject[spawnerNumber].SetActive(true);
-                    StartCoroutine(carSpawn());
-                    spawnerNumber++;
-                    if (spawnerNumber >= carSpawner.Count)
-                    {
-                        spawnerNumber = 0;
-                    }
-                }
-            }
-        }
+      isSpawn[spawnCheck] = setBool;
+      spawnerGameObject[spawnCheck].SetActive(setBool);
     }
-
-    IEnumerator carSpawn()
-    {
-        isSpawning = true;
-        carSpawnAndAddList(spawnerNumber);
-        yield return new WaitForSeconds(spawnTimeSetting);
-        isSpawning = false;
-    }
-
-    void carSpawnAndAddList(int spawnerNumber)
-    {
-        GameObject carSpawn = Instantiate(carPrefab, carSpawner[spawnerNumber].position, carSpawner[spawnerNumber].rotation);
-        carThatSpawn.Add(carSpawn);
-    }
-
-    void spawnObjectSet(bool setBool)
-    {
-        for (int spawnCheck = 0; spawnCheck < isSpawn.Count; spawnCheck++)
-        {
-            isSpawn[spawnCheck] = setBool;
-            spawnerGameObject[spawnCheck].SetActive(setBool);
-        }
-    }
+  }
 }
