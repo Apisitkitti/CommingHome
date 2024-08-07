@@ -1233,6 +1233,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7842741407935324952, guid: 7cbee7ee6bc5c3b4b8c8bdb58db3b2a5, type: 3}
+      propertyPath: m_Name
+      value: TrafficSpawnCar2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7cbee7ee6bc5c3b4b8c8bdb58db3b2a5, type: 3}
       propertyPath: m_Name
       value: city
@@ -1257,6 +1261,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -7842741407935324952, guid: 7cbee7ee6bc5c3b4b8c8bdb58db3b2a5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1400045929}
+    - targetCorrespondingSourceObject: {fileID: -7842741407935324952, guid: 7cbee7ee6bc5c3b4b8c8bdb58db3b2a5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1400045932}
     - targetCorrespondingSourceObject: {fileID: -7065243615992654741, guid: 7cbee7ee6bc5c3b4b8c8bdb58db3b2a5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 537503220}
@@ -1410,7 +1417,7 @@ Transform:
   m_GameObject: {fileID: 399951323}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -43.12694, y: -1.202743, z: -10.53}
+  m_LocalPosition: {x: -38.84, y: -1.202743, z: -10.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4146,8 +4153,9 @@ GameObject:
   - component: {fileID: 1073693303}
   - component: {fileID: 1073693302}
   - component: {fileID: 1073693301}
+  - component: {fileID: 1073693304}
   m_Layer: 0
-  m_Name: pCube641 (1)
+  m_Name: TrafficSpawnCar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4183,6 +4191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3afbfb58ea90ec540817bc400c7c30ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trafficControl: {fileID: 11400000, guid: 361ed4066016eeb4da8158b88c8bca7d, type: 2}
   lightBulb:
   - {fileID: 1197578210}
   - {fileID: 1420118843}
@@ -4192,7 +4201,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 76fdb6eb13227be4db56e679267608db, type: 2}
   - {fileID: 2100000, guid: 0828ecbdd455e764f9b318a0236da73e, type: 2}
   - {fileID: 2100000, guid: a25ec9498f04c2c49b6f9e23198a53da, type: 2}
-  carSpawn: {fileID: 1292798490}
+  carSpawn: {fileID: 1073693304}
+  trafficNumber: 1
   changeLightRedToYellow: 1
   changeLightYellowToGreen: 2
   changeLightGreenToRed: 3
@@ -4246,6 +4256,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1073693299}
   m_Mesh: {fileID: 3637861490044853418, guid: 7cbee7ee6bc5c3b4b8c8bdb58db3b2a5, type: 3}
+--- !u!114 &1073693304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073693299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3801c0fc715da4fa55e6a50c4a56bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSpawner:
+  - {fileID: 399951324}
+  - {fileID: 2071286774}
+  carPrefab: {fileID: 1248598967819147742, guid: c4cad50aa03bbca42938fe318344950b, type: 3}
+  carThatSpawnOnThemap: []
+  trafficControl: {fileID: 11400000, guid: 361ed4066016eeb4da8158b88c8bca7d, type: 2}
+  controlTrafficSpawn: 1
+  spawnTimeSetting: 2
 --- !u!1 &1119565184
 GameObject:
   m_ObjectHideFlags: 0
@@ -5322,6 +5352,7 @@ GameObject:
   - component: {fileID: 1292798490}
   - component: {fileID: 1292798491}
   - component: {fileID: 1292798492}
+  - component: {fileID: 1292798493}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5351,7 +5382,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1292798488}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e3801c0fc715da4fa55e6a50c4a56bf, type: 3}
   m_Name: 
@@ -5360,11 +5391,11 @@ MonoBehaviour:
   - {fileID: 1185453901}
   - {fileID: 907756743}
   - {fileID: 399951324}
-  spawnerGameObject: []
   carPrefab: {fileID: 1248598967819147742, guid: c4cad50aa03bbca42938fe318344950b, type: 3}
-  carThatSpawn: []
+  carThatSpawnOnThemap: []
+  trafficControl: {fileID: 0}
+  controlTrafficSpawn: 0
   spawnTimeSetting: 1
-  isSpawn: 
 --- !u!114 &1292798491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5399,6 +5430,18 @@ MonoBehaviour:
   - {fileID: 582424591}
   - {fileID: 58904588408044041}
   spawnPointSet: 0
+--- !u!114 &1292798493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292798488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d6d0e87d53548428720e8a737fcd47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1306356632
 GameObject:
   m_ObjectHideFlags: 0
@@ -5805,6 +5848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3afbfb58ea90ec540817bc400c7c30ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trafficControl: {fileID: 11400000, guid: 361ed4066016eeb4da8158b88c8bca7d, type: 2}
   lightBulb:
   - {fileID: 2137417398}
   - {fileID: 259084438}
@@ -5814,10 +5858,31 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 76fdb6eb13227be4db56e679267608db, type: 2}
   - {fileID: 2100000, guid: 0828ecbdd455e764f9b318a0236da73e, type: 2}
   - {fileID: 2100000, guid: a25ec9498f04c2c49b6f9e23198a53da, type: 2}
-  carSpawn: {fileID: 1292798490}
+  carSpawn: {fileID: 1400045932}
+  trafficNumber: 2
   changeLightRedToYellow: 1
   changeLightYellowToGreen: 2
   changeLightGreenToRed: 3
+--- !u!114 &1400045932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400045925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3801c0fc715da4fa55e6a50c4a56bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSpawner:
+  - {fileID: 1185453901}
+  - {fileID: 907756743}
+  carPrefab: {fileID: 1248598967819147742, guid: c4cad50aa03bbca42938fe318344950b, type: 3}
+  carThatSpawnOnThemap: []
+  trafficControl: {fileID: 11400000, guid: 361ed4066016eeb4da8158b88c8bca7d, type: 2}
+  controlTrafficSpawn: 2
+  spawnTimeSetting: 10
 --- !u!1 &1420118840
 GameObject:
   m_ObjectHideFlags: 0
@@ -8499,7 +8564,7 @@ Transform:
   m_GameObject: {fileID: 2071286773}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 44.161636, y: -1.0228796, z: -6.01}
+  m_LocalPosition: {x: 40.42, y: -1.0228796, z: -10.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8671,8 +8736,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1185453901}
-  - {fileID: 399951324}
   - {fileID: 907756743}
+  - {fileID: 399951324}
   - {fileID: 2071286774}
   - {fileID: 591423603}
   m_Father: {fileID: 0}

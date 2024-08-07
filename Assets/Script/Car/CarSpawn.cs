@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 
@@ -8,77 +9,70 @@ public class CarSpawn : MonoBehaviour
 {
   [Header("Spawn")]
   [SerializeField] List<Transform> carSpawner;
-  [SerializeField] List<GameObject> spawnerGameObject;
+  // [SerializeField] List<GameObject> spawnerGameObject;
   [SerializeField] GameObject carPrefab;
-  [SerializeField] List<GameObject> carThatSpawn;
+  [SerializeField] List<GameObject> carThatSpawnOnThemap;
+
+
+  [Header("ControlTrafffic start with one ")]
+  [SerializeField] TrafficControl trafficControl;
+  [SerializeField] int controlTrafficSpawn;
   int spawnerNumber = 0;
-  bool isSpawning = false;
 
   #region ForSetSpawnCar
   [Header("CarSpawnSetting")]
   [SerializeField] float spawnTimeSetting = 0f;
-  public List<bool> isSpawn;
+  float spawnCountDown;
+
 
   #endregion
 
   void Awake()
   {
-    foreach (Transform spawnerTransform in carSpawner)
+    for (int index = 0; index < trafficControl.carSpawnEnable.Count; index++)
     {
-      spawnerGameObject.Add(spawnerTransform.gameObject);
+      trafficControl.carSpawnEnable[index] = false;
     }
-  }
-
-  void Start()
-  {
-    spawnObjectSet(false);
   }
 
   void Update()
   {
-    checkWhereToSpawn();
-  }
 
-  public void checkWhereToSpawn()
-  {
-    if (!isSpawning)
+    if (trafficControl.carSpawnEnable[controlTrafficSpawn - 1])
     {
-      foreach (bool isSpawnRequest in isSpawn)
+      if (spawnCountDown > 0)
       {
-        if (isSpawnRequest)
-        {
-          spawnerGameObject[spawnerNumber].SetActive(true);
-          StartCoroutine(carSpawn());
-          spawnerNumber++;
-          if (spawnerNumber >= carSpawner.Count)
-          {
-            spawnerNumber = 0;
-          }
-        }
+        spawnCountDown -= Time.deltaTime;
       }
+      else if (spawnCountDown <= 0)
+      {
+        checkWhereToSpawn();
+        spawnCountDown = spawnTimeSetting;
+      }
+
     }
   }
 
-  IEnumerator carSpawn()
+
+
+  void checkWhereToSpawn()
   {
-    isSpawning = true;
+    if (spawnerNumber >= carSpawner.Count)
+    {
+      spawnerNumber = 0;
+    }
     carSpawnAndAddList(spawnerNumber);
-    yield return new WaitForSeconds(spawnTimeSetting);
-    isSpawning = false;
+    spawnerNumber++;
   }
+
+
+
+
+
 
   void carSpawnAndAddList(int spawnerNumber)
   {
     GameObject carSpawn = Instantiate(carPrefab, carSpawner[spawnerNumber].position, carSpawner[spawnerNumber].rotation);
-    carThatSpawn.Add(carSpawn);
-  }
-
-  void spawnObjectSet(bool setBool)
-  {
-    for (int spawnCheck = 0; spawnCheck < isSpawn.Count; spawnCheck++)
-    {
-      isSpawn[spawnCheck] = setBool;
-      spawnerGameObject[spawnCheck].SetActive(setBool);
-    }
+    carThatSpawnOnThemap.Add(carSpawn);
   }
 }
