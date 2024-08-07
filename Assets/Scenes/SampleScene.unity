@@ -1234,6 +1234,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7842741407935324952, guid: 7cbee7ee6bc5c3b4b8c8bdb58db3b2a5, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: -7842741407935324952, guid: 7cbee7ee6bc5c3b4b8c8bdb58db3b2a5, type: 3}
       propertyPath: m_Name
       value: TrafficSpawnCar2
       objectReference: {fileID: 0}
@@ -1417,7 +1421,7 @@ Transform:
   m_GameObject: {fileID: 399951323}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -38.84, y: -1.202743, z: -10.53}
+  m_LocalPosition: {x: -38.8, y: -1.202743, z: -6.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5860,9 +5864,9 @@ MonoBehaviour:
   - {fileID: 2100000, guid: a25ec9498f04c2c49b6f9e23198a53da, type: 2}
   carSpawn: {fileID: 1400045932}
   trafficNumber: 2
-  changeLightRedToYellow: 1
-  changeLightYellowToGreen: 2
-  changeLightGreenToRed: 3
+  changeLightRedToYellow: 2
+  changeLightYellowToGreen: 4
+  changeLightGreenToRed: 5
 --- !u!114 &1400045932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5882,7 +5886,7 @@ MonoBehaviour:
   carThatSpawnOnThemap: []
   trafficControl: {fileID: 11400000, guid: 361ed4066016eeb4da8158b88c8bca7d, type: 2}
   controlTrafficSpawn: 2
-  spawnTimeSetting: 10
+  spawnTimeSetting: 2
 --- !u!1 &1420118840
 GameObject:
   m_ObjectHideFlags: 0
@@ -8564,7 +8568,7 @@ Transform:
   m_GameObject: {fileID: 2071286773}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 40.42, y: -1.0228796, z: -10.73}
+  m_LocalPosition: {x: 40.42, y: -1.0228796, z: -10.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9375,6 +9379,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 137201986}
   - {fileID: 1965710506}
+  - {fileID: 574424332}
   - {fileID: 2118096439}
   - {fileID: 1292798489}
   - {fileID: 453215191}
@@ -9387,4 +9392,3 @@ SceneRoots:
   - {fileID: 1044537487}
   - {fileID: 1047785089}
   - {fileID: 179082483}
-  - {fileID: 574424332}

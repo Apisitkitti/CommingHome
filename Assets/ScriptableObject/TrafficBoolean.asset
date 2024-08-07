@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d96f54efefd6a074baa6e0815e1aaee7, type: 3}
   m_Name: TrafficBoolean
   m_EditorClassIdentifier: 
-  carSpawnEnable: 0101
+  carSpawnEnable: 0000
