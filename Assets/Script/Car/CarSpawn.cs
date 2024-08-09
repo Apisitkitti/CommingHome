@@ -27,7 +27,7 @@ public class CarSpawn : MonoBehaviour
 
   #endregion
 
-  void Awake()
+  void Start()
   {
     for (int index = 0; index < trafficControl.carSpawnEnable.Count; index++)
     {

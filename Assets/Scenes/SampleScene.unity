@@ -1245,6 +1245,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: city
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7cbee7ee6bc5c3b4b8c8bdb58db3b2a5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6335666411158756418, guid: 7cbee7ee6bc5c3b4b8c8bdb58db3b2a5, type: 3}
@@ -4230,7 +4234,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b9d8eebf65bed1149b52ebe161685f6c, type: 2}
+  - {fileID: 2100000, guid: a860f7930cf4f9d40a125e91c31e17ad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5353,7 +5357,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1292798489}
-  - component: {fileID: 1292798490}
   - component: {fileID: 1292798491}
   - component: {fileID: 1292798492}
   - component: {fileID: 1292798493}
@@ -5379,27 +5382,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &1292798490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1292798488}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e3801c0fc715da4fa55e6a50c4a56bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  carSpawner:
-  - {fileID: 1185453901}
-  - {fileID: 907756743}
-  - {fileID: 399951324}
-  carPrefab: {fileID: 1248598967819147742, guid: c4cad50aa03bbca42938fe318344950b, type: 3}
-  carThatSpawnOnThemap: []
-  trafficControl: {fileID: 0}
-  controlTrafficSpawn: 0
-  spawnTimeSetting: 1
 --- !u!114 &1292798491
 MonoBehaviour:
   m_ObjectHideFlags: 0
