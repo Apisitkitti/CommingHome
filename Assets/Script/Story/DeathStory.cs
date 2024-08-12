@@ -14,7 +14,7 @@ public class DeathStory : MonoBehaviour
   [Header("Input Object")]
   [SerializeField] TMP_Text deathText;
   [SerializeField] DeathStorySet deathStorySet;
-  int deathmessageNumber = 0;
+  public int deathmessageNumber = 0;
 
 
   void Awake()
@@ -28,10 +28,14 @@ public class DeathStory : MonoBehaviour
 
   void deathStorySetter()
   {
-    if (deathStorySet.storyCheck[deathmessageNumber])
+    foreach (bool deathTextSceneChecker in deathStorySet.storyCheck)
     {
-      deathmessageNumber++;
+      if (deathStorySet.storyCheck[deathmessageNumber])
+      {
+        deathmessageNumber++;
+      }
     }
+
   }
   IEnumerator deathMessageStart()
   {
@@ -41,7 +45,17 @@ public class DeathStory : MonoBehaviour
       yield return new WaitForSeconds(timeBetweenWord);
     }
     yield return new WaitForSeconds(wordAppear);
-    deathText.text = "";
+    resetDeathDialogueState(false);
+  }
+  void resetDeathDialogueState(bool active)
+  {
+    deathText.text = string.Empty;
 
+    for (int storyboolNumber = 0; storyboolNumber < deathStorySet.storyCheck.Count; storyboolNumber++)
+    {
+      deathStorySet.storyCheck[storyboolNumber] = active;
+    }
   }
 }
+
+

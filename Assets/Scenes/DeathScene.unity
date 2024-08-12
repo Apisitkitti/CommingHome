@@ -396,6 +396,7 @@ MonoBehaviour:
   - "\u0E23\u0E36\u0E40\u0E1B\u0E25\u0E48\u0E32"
   deathText: {fileID: 1951210698}
   deathStorySet: {fileID: 11400000, guid: 46fa1e148088de044891529acd7351d6, type: 2}
+  deathmessageNumber: 0
 --- !u!4 &271836996
 Transform:
   m_ObjectHideFlags: 0
@@ -1301,10 +1302,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0E2D\u0E2D"
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bbf4b28775a325b4796c102d003862c1, type: 2}
+  m_sharedMaterial: {fileID: 5851963182179353489, guid: bbf4b28775a325b4796c102d003862c1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
