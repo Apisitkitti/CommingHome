@@ -9,6 +9,7 @@ public class DeathStory : MonoBehaviour
   [Header("TimeForWordSetting")]
   [SerializeField] int timeBetweenWord;
   [SerializeField] int wordAppear;
+  [SerializeField] float FadeSpeed;
   [Header("MessageAndImage")]
   [SerializeField] List<string> deathMessage;
   [SerializeField] List<Sprite> deathImageBackground;
@@ -25,7 +26,7 @@ public class DeathStory : MonoBehaviour
   void Awake()
   {
     tempColor = coverImage.color;
-    tempColor.a = 0;
+    tempColor.a = 1f;
     deathStorySetter();
   }
   void Start()
@@ -54,13 +55,23 @@ public class DeathStory : MonoBehaviour
     //   yield return new WaitForSeconds(timeBetweenWord);
     // }
     deathText.text = deathMessage[deathmessageNumber];
-    yield return new WaitForSeconds(timeBetweenWord);//สร้างตัวแปรใหม่เอานะ
-    coverImage.color = tempColor;
-    backGroundDeathimage.sprite = deathImageBackground[deathmessageNumber];
     yield return new WaitForSeconds(wordAppear);
+    backGroundDeathimage.sprite = deathImageBackground[deathmessageNumber];
+    StartCoroutine(FadePictureDeath());
+    
 
     resetDeathDialogueState(false);
   }
+
+   IEnumerator FadePictureDeath(){
+    while(tempColor.a > 0f){
+      tempColor.a -= Time.deltaTime*FadeSpeed;
+      coverImage.color = tempColor;
+      yield return null;
+    }
+
+  }
+
   public void resetDeathDialogueState(bool active)
   {
     deathText.text = string.Empty;

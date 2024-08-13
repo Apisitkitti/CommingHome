@@ -617,7 +617,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenWord: 1
-  wordAppear: 5
+  wordAppear: 4
+  FadeSpeed: 2
   deathMessage:
   - "\u0E40\u0E1F\u0E23\u0E34\u0E2A\u0E40\u0E1B\u0E47\u0E19\u0E40\u0E01\u0E01"
   - "\u0E08\u0E23\u0E34\u0E07\u0E40\u0E1B\u0E25\u0E48\u0E32"
@@ -626,7 +627,7 @@ MonoBehaviour:
   - "\u0E23\u0E36\u0E40\u0E1B\u0E25\u0E48\u0E32"
   - "\u0E40\u0E01\u0E40\u0E01\u0E40\u0E01"
   deathImageBackground:
-  - {fileID: 21300000, guid: 1b30196ca66ece04f80c3809a3133644, type: 3}
+  - {fileID: 21300000, guid: 5bdbb1e38584c8e4487753b44319264b, type: 3}
   deathText: {fileID: 1951210698}
   backGroundDeathimage: {fileID: 59082887}
   coverImage: {fileID: 192929190}
@@ -1601,7 +1602,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -20.660583, y: 77.49745, z: -20.309875, w: 84.11156}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
