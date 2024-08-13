@@ -15,13 +15,17 @@ public class DeathStory : MonoBehaviour
 
   [Header("Input Object")]
   [SerializeField] TMP_Text deathText;
-  [SerializeField] Image image;
+  [SerializeField] Image backGroundDeathimage;
+  [SerializeField] Image coverImage;
+
   [SerializeField] DeathStorySet deathStorySet;
   public int deathmessageNumber = 0;
-
+  private Color tempColor;
 
   void Awake()
   {
+    tempColor = coverImage.color;
+    tempColor.a = 0;
     deathStorySetter();
   }
   void Start()
@@ -42,13 +46,19 @@ public class DeathStory : MonoBehaviour
   }
   IEnumerator deathMessageStart()
   {
-    foreach (char characterInWords in deathMessage[deathmessageNumber])
-    {
-      deathText.text += characterInWords;
-      yield return new WaitForSeconds(timeBetweenWord);
-    }
+    coverImage.color = Color.black;
+    yield return new WaitForSeconds(timeBetweenWord);
+    // foreach (char characterInWords in deathMessage[deathmessageNumber])
+    // {
+    //   deathText.text += characterInWords;
+    //   yield return new WaitForSeconds(timeBetweenWord);
+    // }
+    deathText.text = deathMessage[deathmessageNumber];
+    yield return new WaitForSeconds(timeBetweenWord);//สร้างตัวแปรใหม่เอานะ
+    coverImage.color = tempColor;
+    backGroundDeathimage.sprite = deathImageBackground[deathmessageNumber];
     yield return new WaitForSeconds(wordAppear);
-    image.sprite = deathImageBackground[deathmessageNumber];
+
     resetDeathDialogueState(false);
   }
   public void resetDeathDialogueState(bool active)

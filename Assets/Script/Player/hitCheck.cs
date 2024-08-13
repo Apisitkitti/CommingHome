@@ -12,9 +12,8 @@ public class hitCheck : MonoBehaviour
   {
     if (col.gameObject.tag == "Car")
     {
-      respawn.respawnPlayer();
-      // articleDeathChecker.storyCheck[0] = true;
-      // SceneManager.LoadScene("DeathScene");
+      // respawn.respawnPlayer();
+      SceneManager.LoadScene("DeathScene");
     }
   }
 }
