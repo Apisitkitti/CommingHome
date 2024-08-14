@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CarMove : MonoBehaviour
 {
-  [SerializeField] float carSpeed = 0f;
+  public float carSpeed = 0f;
   [SerializeField] Rigidbody rb;
   private Vector3 initForward;
 

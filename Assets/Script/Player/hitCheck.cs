@@ -5,15 +5,32 @@ using UnityEngine.SceneManagement;
 
 public class hitCheck : MonoBehaviour
 {
-  [SerializeField] respawnScript respawn;
-  [SerializeField] DeathStorySet articleDeathChecker;
-
   void OnCollisionEnter(Collision col)
   {
     if (col.gameObject.tag == "Car")
     {
-      // respawn.respawnPlayer();
       SceneManager.LoadScene("DeathScene");
+    }
+  }
+  void OnTriggerEnter(Collider col)
+  {
+    if (col.gameObject.tag == "StoryHit")
+    {
+      SceneManager.LoadScene("BusScene");
+    }
+  }
+  void OnTriggerStay(Collider col)
+  {
+    if (col.gameObject.tag == "HitBox")
+    {
+
+    }
+  }
+  void OnTriggerExit(Collider col)
+  {
+    if (col.gameObject.tag == "HitBox")
+    {
+
     }
   }
 }

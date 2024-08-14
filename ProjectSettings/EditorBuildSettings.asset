@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DeathScene.unity
     guid: e236143dfee0aa34d8c856cf398baaf1
+  - enabled: 1
+    path: Assets/Scenes/BusScene.unity
+    guid: 1f30c24eb62449b4b9f89c2a4dd37231
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 59397b422b67eb44e9deee0df2c7db48, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 718235ca1a15d6c4aa0f0b74d9a4b2d3, type: 2}

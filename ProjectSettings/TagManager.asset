@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Car
   - wall
+  - StoryHit
+  - HitBox
+  - Bus
   layers:
   - Default
   - TransparentFX
