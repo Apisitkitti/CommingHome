@@ -8,6 +8,7 @@ TagManager:
   - wall
   - StoryHit
   - HitBox
+  - Bus
   layers:
   - Default
   - TransparentFX
