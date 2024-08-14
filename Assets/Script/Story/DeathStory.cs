@@ -18,7 +18,7 @@ public class DeathStory : MonoBehaviour
   [SerializeField] TMP_Text deathText;
   [SerializeField] Image backGroundDeathimage;
   [SerializeField] Image coverImage;
-
+  [SerializeField] CanvasGroup canvasGroup;
   [SerializeField] DeathStorySet deathStorySet;
   public int deathmessageNumber = 0;
   private Color tempColor;
@@ -58,8 +58,8 @@ public class DeathStory : MonoBehaviour
     yield return new WaitForSeconds(wordAppear);
     backGroundDeathimage.sprite = deathImageBackground[deathmessageNumber];
     StartCoroutine(FadePictureDeath());
-    
-
+    yield return new WaitForSeconds(FadeSpeed);
+    StartCoroutine(FadeBackMenu());
     resetDeathDialogueState(false);
   }
 
@@ -70,6 +70,15 @@ public class DeathStory : MonoBehaviour
       yield return null;
     }
 
+  }
+  
+   IEnumerator FadeBackMenu(){
+    while(canvasGroup.alpha < 1f)
+    {
+      canvasGroup.alpha += Time.deltaTime*FadeSpeed;
+      yield return null;
+    }
+    
   }
 
   public void resetDeathDialogueState(bool active)
