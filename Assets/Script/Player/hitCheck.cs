@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class hitCheck : MonoBehaviour
 {
+  [SerializeField] UiSetter uiSetter;
   void OnCollisionEnter(Collision col)
   {
     if (col.gameObject.tag == "Car")
@@ -23,14 +24,14 @@ public class hitCheck : MonoBehaviour
   {
     if (col.gameObject.tag == "HitBox")
     {
-
+      uiSetter.setBusUI(true);
     }
   }
   void OnTriggerExit(Collider col)
   {
     if (col.gameObject.tag == "HitBox")
     {
-
+      uiSetter.setBusUI(false);
     }
   }
 }

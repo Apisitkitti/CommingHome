@@ -8,6 +8,7 @@ public class BusSpawn : MonoBehaviour
   [SerializeField] Transform busSpawn;
   [SerializeField] int timeSpawn;
 
+
   void Start()
   {
     StartCoroutine(busSpawner());

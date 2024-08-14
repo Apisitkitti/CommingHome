@@ -9,7 +9,6 @@ public class StoryStart : MonoBehaviour
   [SerializeField] GameObject checkPoint;
   [SerializeField] string lines;
   [SerializeField] float textSpeed;
-  private int index;
 
   void Start()
   {
@@ -17,7 +16,6 @@ public class StoryStart : MonoBehaviour
   }
   public void startDialogue()
   {
-    index = 0;
     StartCoroutine(typeLine());
     Destroy(checkPoint);
 
