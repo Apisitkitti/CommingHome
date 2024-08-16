@@ -2344,6 +2344,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiSetter: {fileID: 801563580}
+--- !u!114 &582424607 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11400010, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+  m_PrefabInstance: {fileID: 1130762045}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582424589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0950df82e7936c84983497630bde5b54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &589195491
 GameObject:
   m_ObjectHideFlags: 0
@@ -3375,6 +3386,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2112914172117747059, guid: cd22b0fac9784d14d98e16dc1493af10, type: 3}
       insertIndex: -1
       addedObject: {fileID: 801563580}
+    - targetCorrespondingSourceObject: {fileID: 2112914172117747059, guid: cd22b0fac9784d14d98e16dc1493af10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 801563582}
   m_SourcePrefab: {fileID: 100100000, guid: cd22b0fac9784d14d98e16dc1493af10, type: 3}
 --- !u!1 &801563579 stripped
 GameObject:
@@ -3412,6 +3426,18 @@ MonoBehaviour:
   busPrefab: {fileID: 7380761486775507705, guid: 152bf714b1de2ba44918e5168dc0585d, type: 3}
   busSpawn: {fileID: 2071286774}
   timeSpawn: 5
+--- !u!114 &801563582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801563579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e3a482198622e94682cbea282f46bf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &820734672
 GameObject:
   m_ObjectHideFlags: 0
@@ -7929,6 +7955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   busSpawn: {fileID: 801563581}
   busUi: {fileID: 801563580}
+  VrMove: {fileID: 582424607}
 --- !u!4 &1787721988
 Transform:
   m_ObjectHideFlags: 0
@@ -8675,7 +8702,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'I kuay first edok test '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10104,8 +10131,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8558309515229466050, guid: 18a91507015b8964998e194cb875da5f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 801563582}
+    - target: {fileID: 8558309515229466050, guid: 18a91507015b8964998e194cb875da5f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8558309515229466050, guid: 18a91507015b8964998e194cb875da5f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: nextScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 8558309515229466050, guid: 18a91507015b8964998e194cb875da5f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneManage, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8558309515229466050, guid: 18a91507015b8964998e194cb875da5f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8944058567403548835, guid: 18a91507015b8964998e194cb875da5f, type: 3}
       propertyPath: m_Pivot.x

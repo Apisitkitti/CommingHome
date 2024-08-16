@@ -6,14 +6,25 @@ public class buttonSet : MonoBehaviour
 {
   [SerializeField] BusSpawn busSpawn;
   [SerializeField] UiSetter busUi;
+  [SerializeField] OVRPlayerController VrMove;
+  float indexSpeed;
+  void Start()
+  {
+    indexSpeed = VrMove.Acceleration;
+  }
   public void setBusSpawn()
   {
-    busSpawn.enabled = true;
-    busUi.setBusUI(false);
+    setActiveBus(true);
+    VrMove.Acceleration = 0;
   }
   public void dontWaitBus()
   {
-    busSpawn.enabled = false;
-    busUi.setBusUI(true);
+    setActiveBus(false);
+    VrMove.Acceleration = indexSpeed;
+  }
+  void setActiveBus(bool isActive)
+  {
+    busSpawn.enabled = isActive;
+    busUi.setBusUI(!isActive);
   }
 }
