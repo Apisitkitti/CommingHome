@@ -3395,6 +3395,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   busUIForWait: {fileID: 4129872636759814644}
   busUIForDontWait: {fileID: 4129872636759814643}
+  takeABusUI: {fileID: 2052132533}
+  wrapBusButton: {fileID: 4129872636759814641}
 --- !u!114 &801563581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7666,9 +7668,10 @@ GameObject:
   - component: {fileID: 1755923368}
   - component: {fileID: 1755923367}
   - component: {fileID: 1755923366}
+  - component: {fileID: 1755923369}
   m_Layer: 0
   m_Name: busStop
-  m_TagString: Bus
+  m_TagString: stop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7736,6 +7739,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1755923369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755923365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64fa5ffcd8bdda74bb1c723bc3eb1e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setUiActive: {fileID: 801563580}
 --- !u!1 &1766255473
 GameObject:
   m_ObjectHideFlags: 0
@@ -7912,7 +7928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   busSpawn: {fileID: 801563581}
-  destroyUI: {fileID: 4129872636759814641}
+  busUi: {fileID: 801563580}
 --- !u!4 &1787721988
 Transform:
   m_ObjectHideFlags: 0
@@ -9357,6 +9373,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 764278015}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2052132533 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1998026750058959826, guid: 18a91507015b8964998e194cb875da5f, type: 3}
+  m_PrefabInstance: {fileID: 4129872636759814640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2069521616
 GameObject:
   m_ObjectHideFlags: 0
@@ -10010,6 +10031,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1178363268426705495, guid: 18a91507015b8964998e194cb875da5f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1243363542496452909, guid: 18a91507015b8964998e194cb875da5f, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -10054,6 +10079,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1998026750058959826, guid: 18a91507015b8964998e194cb875da5f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3051124898737859127, guid: 18a91507015b8964998e194cb875da5f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
@@ -10065,6 +10094,18 @@ PrefabInstance:
     - target: {fileID: 6280339122598903367, guid: 18a91507015b8964998e194cb875da5f, type: 3}
       propertyPath: m_Name
       value: BusUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8558309515229466050, guid: 18a91507015b8964998e194cb875da5f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8558309515229466050, guid: 18a91507015b8964998e194cb875da5f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8558309515229466050, guid: 18a91507015b8964998e194cb875da5f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8944058567403548835, guid: 18a91507015b8964998e194cb875da5f, type: 3}
       propertyPath: m_Pivot.x

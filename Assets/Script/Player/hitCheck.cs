@@ -24,14 +24,14 @@ public class hitCheck : MonoBehaviour
   {
     if (col.gameObject.tag == "HitBox")
     {
-      uiSetter.setBusUI(true);
+      uiSetter.setOverAllBusUi(true);
     }
   }
   void OnTriggerExit(Collider col)
   {
     if (col.gameObject.tag == "HitBox")
     {
-      uiSetter.setBusUI(false);
+      uiSetter.setOverAllBusUi(false);
     }
   }
 }

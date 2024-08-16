@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 72a2d2411a727214a948477c6cf82a07, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Bus
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -153,3 +153,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   busMove: {fileID: 6671910758558069534}
+  setUiActive: {fileID: 0}

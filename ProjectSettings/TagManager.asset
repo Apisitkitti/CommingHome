@@ -9,6 +9,7 @@ TagManager:
   - StoryHit
   - HitBox
   - Bus
+  - stop
   layers:
   - Default
   - TransparentFX
