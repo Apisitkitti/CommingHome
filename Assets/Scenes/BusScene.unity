@@ -3393,7 +3393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 028eacc6d5d815c40aef600f9fa51dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  busUIForWait: {fileID: 4129872636759814641}
+  busUIForWait: {fileID: 4129872636759814644}
+  busUIForDontWait: {fileID: 4129872636759814643}
 --- !u!114 &801563581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10009,6 +10010,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1243363542496452909, guid: 18a91507015b8964998e194cb875da5f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1661762841201529323, guid: 18a91507015b8964998e194cb875da5f, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
       value: 0
@@ -10048,6 +10053,14 @@ PrefabInstance:
     - target: {fileID: 1661762841201529323, guid: 18a91507015b8964998e194cb875da5f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051124898737859127, guid: 18a91507015b8964998e194cb875da5f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600707342191109496, guid: 18a91507015b8964998e194cb875da5f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6280339122598903367, guid: 18a91507015b8964998e194cb875da5f, type: 3}
       propertyPath: m_Name
@@ -10168,6 +10181,16 @@ MonoBehaviour:
     m_Bits: 4294967295
   pointer: {fileID: 0}
   sortOrder: 0
+--- !u!1 &4129872636759814643 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1243363542496452909, guid: 18a91507015b8964998e194cb875da5f, type: 3}
+  m_PrefabInstance: {fileID: 4129872636759814640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4129872636759814644 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 882696648093324287, guid: 18a91507015b8964998e194cb875da5f, type: 3}
+  m_PrefabInstance: {fileID: 4129872636759814640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &4129872636759814647
 MonoBehaviour:
   m_ObjectHideFlags: 0

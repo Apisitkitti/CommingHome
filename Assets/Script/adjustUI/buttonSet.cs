@@ -5,15 +5,15 @@ using UnityEngine;
 public class buttonSet : MonoBehaviour
 {
   [SerializeField] BusSpawn busSpawn;
-  [SerializeField] GameObject destroyUI;
+  [SerializeField] UiSetter busUi;
   public void setBusSpawn()
   {
     busSpawn.enabled = true;
-    Destroy(destroyUI);
-
+    busUi.setBusUI(false);
   }
   public void dontWaitBus()
   {
     busSpawn.enabled = false;
+    busUi.setBusUI(true);
   }
 }
