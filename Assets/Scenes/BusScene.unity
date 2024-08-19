@@ -2012,6 +2012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   story: {fileID: 0}
+  storySetter: {fileID: 0}
 --- !u!1 &506900711
 GameObject:
   m_ObjectHideFlags: 0
@@ -7069,7 +7070,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 43e1f9e711e82c84e931c16003eacba5, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 86636b07954fb6e42900a0cdee50bf32, type: 2}
 --- !u!4 &1519193136
 Transform:
   m_ObjectHideFlags: 0
