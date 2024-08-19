@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 
@@ -10,7 +9,7 @@ public class CarSpawn : MonoBehaviour
   [Header("Spawn")]
   [SerializeField] List<Transform> carSpawner;
   // [SerializeField] List<GameObject> spawnerGameObject;
-  [SerializeField] GameObject carPrefab;
+  [SerializeField] List<GameObject> carPrefab;
   [SerializeField] List<GameObject> carThatSpawnOnThemap;
 
 
@@ -23,8 +22,8 @@ public class CarSpawn : MonoBehaviour
   [Header("CarSpawnSetting")]
   [SerializeField] float spawnTimeSetting = 0f;
   float spawnCountDown;
-
-
+  int randomCarSpawn;
+  int start, endCar;
   #endregion
 
   void Start()
@@ -33,10 +32,15 @@ public class CarSpawn : MonoBehaviour
     {
       trafficControl.carSpawnEnable[index] = false;
     }
+    start = 0;
+    endCar = carPrefab.Count;
   }
 
   void Update()
   {
+
+    randomCarSpawn = randomNumber();
+    Debug.Log(randomNumber());
 
     if (trafficControl.carSpawnEnable[controlTrafficSpawn - 1])
     {
@@ -72,7 +76,14 @@ public class CarSpawn : MonoBehaviour
 
   void carSpawnAndAddList(int spawnerNumber)
   {
-    GameObject carSpawn = Instantiate(carPrefab, carSpawner[spawnerNumber].position, carSpawner[spawnerNumber].rotation);
+
+    GameObject carSpawn = Instantiate(carPrefab[randomNumber()], carSpawner[spawnerNumber].position, carSpawner[spawnerNumber].rotation);
     carThatSpawnOnThemap.Add(carSpawn);
   }
+
+  int randomNumber()
+  {
+    return UnityEngine.Random.Range(start, endCar);
+  }
 }
+

@@ -4876,7 +4876,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carSpawner:
   - {fileID: 399951324}
-  carPrefab: {fileID: 1248598967819147742, guid: c4cad50aa03bbca42938fe318344950b, type: 3}
+  carPrefab:
+  - {fileID: 1248598967819147742, guid: c4cad50aa03bbca42938fe318344950b, type: 3}
+  - {fileID: 7380761486775507705, guid: 152bf714b1de2ba44918e5168dc0585d, type: 3}
   carThatSpawnOnThemap: []
   trafficControl: {fileID: 11400000, guid: 361ed4066016eeb4da8158b88c8bca7d, type: 2}
   controlTrafficSpawn: 1
@@ -6474,7 +6476,9 @@ MonoBehaviour:
   carSpawner:
   - {fileID: 1185453901}
   - {fileID: 907756743}
-  carPrefab: {fileID: 1248598967819147742, guid: c4cad50aa03bbca42938fe318344950b, type: 3}
+  carPrefab:
+  - {fileID: 1248598967819147742, guid: c4cad50aa03bbca42938fe318344950b, type: 3}
+  - {fileID: 7380761486775507705, guid: 152bf714b1de2ba44918e5168dc0585d, type: 3}
   carThatSpawnOnThemap: []
   trafficControl: {fileID: 11400000, guid: 361ed4066016eeb4da8158b88c8bca7d, type: 2}
   controlTrafficSpawn: 2

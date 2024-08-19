@@ -8,7 +8,7 @@ public class hitCheck : MonoBehaviour
   [SerializeField] UiSetter uiSetter;
   void OnCollisionEnter(Collision col)
   {
-    if (col.gameObject.tag == "Car")
+    if (col.gameObject.tag == "Car" || col.gameObject.tag == "Bus")
     {
       SceneManager.LoadScene("DeathScene");
     }
