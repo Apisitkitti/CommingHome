@@ -4920,6 +4920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   story: {fileID: 1292798491}
+  storySetter: {fileID: 11400000, guid: cc5e2cc9660726b498d035529ed5a45a, type: 2}
 --- !u!1 &644184172
 GameObject:
   m_ObjectHideFlags: 0
