@@ -21,9 +21,11 @@ public class StoryStart : MonoBehaviour
 
   void storySetter()
   {
+
     foreach (bool storyIsCheck in normalStory.storyCheck)
     {
       if (storyIsCheck) dialogueNumber++;
+      if (dialogueNumber >= lines.Count) return;
     }
   }
   public void startDialogue()
