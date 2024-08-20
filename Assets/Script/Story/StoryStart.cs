@@ -6,7 +6,7 @@ using TMPro;
 public class StoryStart : MonoBehaviour
 {
   [SerializeField] TMP_Text storyText;
-  [SerializeField] List<string> lines;
+  [SerializeField] storyInside lines;
   [SerializeField] float textSpeed;
   [SerializeField] float uiDisappear;
   [SerializeField] DeathStorySet normalStory;
@@ -25,7 +25,7 @@ public class StoryStart : MonoBehaviour
     foreach (bool storyIsCheck in normalStory.storyCheck)
     {
       if (storyIsCheck) dialogueNumber++;
-      if (dialogueNumber >= lines.Count) return;
+      if (dialogueNumber >= lines.storyLine.Count) return;
     }
   }
   public void startDialogue()
@@ -37,7 +37,7 @@ public class StoryStart : MonoBehaviour
   }
   IEnumerator typeLine()
   {
-    foreach (char charcterInConversation in lines[dialogueNumber])
+    foreach (char charcterInConversation in lines.storyLine[dialogueNumber])
     {
       storyText.text += charcterInConversation;
       yield return new WaitForSeconds(textSpeed);

@@ -1332,7 +1332,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &269112558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3314,6 +3314,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 737300756099939080, guid: cd22b0fac9784d14d98e16dc1493af10, type: 3}
+      propertyPath: lines
+      value: 
+      objectReference: {fileID: 11400000, guid: b9bea13c46abc364e9a22e66299de1f5, type: 2}
+    - target: {fileID: 737300756099939080, guid: cd22b0fac9784d14d98e16dc1493af10, type: 3}
+      propertyPath: storyUi
+      value: 
+      objectReference: {fileID: 820734672}
+    - target: {fileID: 737300756099939080, guid: cd22b0fac9784d14d98e16dc1493af10, type: 3}
       propertyPath: storyText
       value: 
       objectReference: {fileID: 1953052986}
@@ -3321,6 +3329,10 @@ PrefabInstance:
       propertyPath: checkPoint
       value: 
       objectReference: {fileID: 458464251}
+    - target: {fileID: 737300756099939080, guid: cd22b0fac9784d14d98e16dc1493af10, type: 3}
+      propertyPath: normalStory
+      value: 
+      objectReference: {fileID: 11400000, guid: cc5e2cc9660726b498d035529ed5a45a, type: 2}
     - target: {fileID: 2112914172117747059, guid: cd22b0fac9784d14d98e16dc1493af10, type: 3}
       propertyPath: m_Name
       value: 'GameManager '

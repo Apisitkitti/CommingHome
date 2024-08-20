@@ -14,6 +14,7 @@ public class CheckPoint : MonoBehaviour
     {
       story.startDialogue();
       storySetter.storyCheck[storyNumber] = true;
+      storyNumber++;
       Destroy(gameObject);
     }
   }

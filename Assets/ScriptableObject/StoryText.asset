@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23f167cac7c44a488dd24a13b0f18f0, type: 3}
   m_Name: StoryText
   m_EditorClassIdentifier: 
-  storyCheck: 0000
+  storyCheck: 0100
