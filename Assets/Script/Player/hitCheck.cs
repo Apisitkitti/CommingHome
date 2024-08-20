@@ -6,10 +6,15 @@ using UnityEngine.SceneManagement;
 public class hitCheck : MonoBehaviour
 {
   [SerializeField] UiSetter uiSetter;
+  [SerializeField] DeathStorySet normalStorySet;
   void OnCollisionEnter(Collision col)
   {
     if (col.gameObject.tag == "Car" || col.gameObject.tag == "Bus")
     {
+      for (int storySet = 0; storySet < normalStorySet.storyCheck.Count; storySet++)
+      {
+        normalStorySet.storyCheck[storySet] = false;
+      }
       SceneManager.LoadScene("DeathScene");
     }
   }
@@ -24,6 +29,7 @@ public class hitCheck : MonoBehaviour
   {
     if (col.gameObject.tag == "HitBox")
     {
+      dontWantErrorFunction();
       uiSetter.setOverAllBusUi(true);
     }
   }
@@ -31,7 +37,13 @@ public class hitCheck : MonoBehaviour
   {
     if (col.gameObject.tag == "HitBox")
     {
+      dontWantErrorFunction();
       uiSetter.setOverAllBusUi(false);
     }
+  }
+
+  void dontWantErrorFunction()
+  {
+    if (uiSetter == null) return;
   }
 }
