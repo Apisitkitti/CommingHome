@@ -5909,6 +5909,7 @@ MonoBehaviour:
   trafficControl: {fileID: 11400000, guid: 361ed4066016eeb4da8158b88c8bca7d, type: 2}
   controlTrafficSpawn: 1
   spawnTimeSetting: 2
+  controlBusSpawnPerStack: 7
 --- !u!1 &1107460936 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8445681553818345579, guid: 9f59c47024c54bf45b10bad4e4a80146, type: 3}

@@ -16,11 +16,13 @@ public class CarSpawn : MonoBehaviour
   [Header("ControlTrafffic start with one ")]
   [SerializeField] TrafficControl trafficControl;
   [SerializeField] int controlTrafficSpawn;
+
   int spawnerNumber = 0;
 
   #region ForSetSpawnCar
   [Header("CarSpawnSetting")]
   [SerializeField] float spawnTimeSetting = 0f;
+  int controlBusSpawnPerStack = 7;
   float spawnCountDown;
   int randomCarSpawn;
   int start, endCar;
@@ -39,22 +41,10 @@ public class CarSpawn : MonoBehaviour
   void Update()
   {
 
-    randomCarSpawn = randomNumber();
-    Debug.Log(randomNumber());
-
-    if (trafficControl.carSpawnEnable[controlTrafficSpawn - 1])
-    {
-      if (spawnCountDown > 0)
-      {
-        spawnCountDown -= Time.deltaTime;
-      }
-      else if (spawnCountDown <= 0)
-      {
-        checkWhereToSpawn();
-        spawnCountDown = spawnTimeSetting;
-      }
-
-    }
+    // randomCarSpawn = randomNumber();
+    // Debug.Log(randomNumber());
+    timeCounter();
+    spawnNumber();
   }
 
 
@@ -76,14 +66,32 @@ public class CarSpawn : MonoBehaviour
 
   void carSpawnAndAddList(int spawnerNumber)
   {
-
-    GameObject carSpawn = Instantiate(carPrefab[randomNumber()], carSpawner[spawnerNumber].position, carSpawner[spawnerNumber].rotation);
+    GameObject carSpawn = Instantiate(carPrefab[spawnNumber()], carSpawner[spawnerNumber].position, carSpawner[spawnerNumber].rotation);
     carThatSpawnOnThemap.Add(carSpawn);
   }
 
-  int randomNumber()
+  int spawnNumber()
   {
-    return UnityEngine.Random.Range(start, endCar);
+    int whatIsThiscar = ((carThatSpawnOnThemap.Count >= controlBusSpawnPerStack) && (carThatSpawnOnThemap.Count % controlBusSpawnPerStack == 0)) ? 0 : 1;
+    return whatIsThiscar;
+    // return UnityEngine.Random.Range(start, endCar);
+  }
+  void timeCounter()
+  {
+    if (trafficControl.carSpawnEnable[controlTrafficSpawn - 1])
+    {
+      if (spawnCountDown > 0)
+      {
+        spawnCountDown -= Time.deltaTime;
+      }
+      else if (spawnCountDown <= 0)
+      {
+        checkWhereToSpawn();
+        spawnCountDown = spawnTimeSetting;
+      }
+
+    }
   }
 }
+
 
