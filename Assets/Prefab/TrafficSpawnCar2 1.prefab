@@ -446,7 +446,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   carPrefab:
-  - {fileID: 7380761486775507705, guid: 152bf714b1de2ba44918e5168dc0585d, type: 3}
+  - {fileID: 3284635701766062060, guid: 1ee82135b9ea44e4bad9488a28e548b9, type: 3}
   - {fileID: 4225410675352136644, guid: 179b04831ca1bbf449a8ec8d63b01008, type: 3}
   carThatSpawnOnThemap: []
   trafficControl: {fileID: 11400000, guid: 361ed4066016eeb4da8158b88c8bca7d, type: 2}

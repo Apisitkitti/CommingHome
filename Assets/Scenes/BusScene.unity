@@ -3292,7 +3292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a21724149952d24aa56ce02457a4369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  busPrefab: {fileID: 7380761486775507705, guid: 152bf714b1de2ba44918e5168dc0585d, type: 3}
+  busPrefab: {fileID: 3284635701766062060, guid: 1ee82135b9ea44e4bad9488a28e548b9, type: 3}
   busSpawn: {fileID: 2071286774}
   timeSpawn: 5
 --- !u!114 &801563582
@@ -4785,7 +4785,8 @@ PrefabInstance:
       propertyPath: carSpawner.Array.data[1]
       value: 
       objectReference: {fileID: 907756743}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2417047411525208634, guid: fdb61e170a4c87741a0534505b29acd8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

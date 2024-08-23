@@ -4988,7 +4988,7 @@ Transform:
   m_GameObject: {fileID: 907756742}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -39, y: -1.202743, z: 12.4}
+  m_LocalPosition: {x: -38.04, y: -1.202743, z: 12.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5903,7 +5903,7 @@ MonoBehaviour:
   - {fileID: 399951324}
   - {fileID: 2071286774}
   carPrefab:
-  - {fileID: 7380761486775507705, guid: 152bf714b1de2ba44918e5168dc0585d, type: 3}
+  - {fileID: 3284635701766062060, guid: 1ee82135b9ea44e4bad9488a28e548b9, type: 3}
   - {fileID: 4225410675352136644, guid: 179b04831ca1bbf449a8ec8d63b01008, type: 3}
   carThatSpawnOnThemap: []
   trafficControl: {fileID: 11400000, guid: 361ed4066016eeb4da8158b88c8bca7d, type: 2}
@@ -6663,7 +6663,7 @@ Transform:
   m_GameObject: {fileID: 1185453900}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -39, y: -1.202743, z: 9.23}
+  m_LocalPosition: {x: -37.96, y: -1.202743, z: 9.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

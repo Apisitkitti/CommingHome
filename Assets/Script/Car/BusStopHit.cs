@@ -5,11 +5,17 @@ using UnityEngine;
 public class BusStopHit : MonoBehaviour
 {
   [SerializeField] CarMove busMove;
+  [SerializeField] float timeToStopBus;
   void OnTriggerEnter(Collider col)
   {
     if (col.gameObject.tag == "stop")
     {
-      busMove.carSpeed = 0;
+      StartCoroutine(delayStopBus());
     }
+  }
+  IEnumerator delayStopBus()
+  {
+    yield return new WaitForSeconds(timeToStopBus);
+    busMove.carSpeed = 0;
   }
 }

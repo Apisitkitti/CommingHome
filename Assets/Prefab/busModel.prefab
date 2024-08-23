@@ -1,0 +1,166 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2401605066648306365
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5072913840731765150, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+      propertyPath: m_TagString
+      value: Bus
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+      propertyPath: m_Name
+      value: busModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+      propertyPath: m_TagString
+      value: Bus
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1353210706200864344}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8444045186202514298}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1194796933040429142}
+    - targetCorrespondingSourceObject: {fileID: -5072913840731765150, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3750417535598082395}
+  m_SourcePrefab: {fileID: 100100000, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+--- !u!1 &1787177708663112927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5072913840731765150, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+  m_PrefabInstance: {fileID: 2401605066648306365}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &3750417535598082395
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787177708663112927}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2016538454176284114, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+--- !u!1 &3284635701766062060 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
+  m_PrefabInstance: {fileID: 2401605066648306365}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1353210706200864344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3284635701766062060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf8bd045d0eed34e972e76e951c9446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  busMove: {fileID: 8444045186202514298}
+  timeToStopBus: 0.1
+--- !u!114 &8444045186202514298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3284635701766062060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb23b0466e00654383e92ea1d33b918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSpeed: 1000
+  rb: {fileID: 1194796933040429142}
+--- !u!54 &1194796933040429142
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3284635701766062060}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
