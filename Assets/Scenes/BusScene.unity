@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.5
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13785702, g: 0.16596198, b: 0.17310919, a: 0.5}
+  m_IndirectSpecularColor: {r: 0.00179043, g: 0.0015603101, b: 0.0010539835, a: 0.5}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3182,6 +3182,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1953052986}
     - target: {fileID: 737300756099939080, guid: cd22b0fac9784d14d98e16dc1493af10, type: 3}
+      propertyPath: textSpeed
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 737300756099939080, guid: cd22b0fac9784d14d98e16dc1493af10, type: 3}
       propertyPath: checkPoint
       value: 
       objectReference: {fileID: 458464251}
@@ -3189,6 +3193,10 @@ PrefabInstance:
       propertyPath: normalStory
       value: 
       objectReference: {fileID: 11400000, guid: cc5e2cc9660726b498d035529ed5a45a, type: 2}
+    - target: {fileID: 737300756099939080, guid: cd22b0fac9784d14d98e16dc1493af10, type: 3}
+      propertyPath: uiDisappear
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2112914172117747059, guid: cd22b0fac9784d14d98e16dc1493af10, type: 3}
       propertyPath: m_Name
       value: 'GameManager '
