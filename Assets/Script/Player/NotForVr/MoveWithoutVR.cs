@@ -11,6 +11,7 @@ public class MoveWithoutVR : MonoBehaviour
   float rotationX = 0f;
   float rotationY = 0f;
   [SerializeField] float cameraSentivity = 15f;
+  [SerializeField] AudioSource walkingSound;
   #endregion
 
   Vector3 move;
@@ -32,6 +33,13 @@ public class MoveWithoutVR : MonoBehaviour
     move = new Vector3(moveX, 0f, moveY);
     move = move * moveSpeed * Time.deltaTime;
     transform.position += move;
+     if (move != Vector3.zero)
+        {
+            if (!walkingSound.isPlaying)
+            {
+                walkingSound.Play();
+            }
+        }
   }
 
   void cameraMoveWithMouse()
