@@ -43,6 +43,7 @@ MonoBehaviour:
   - {fileID: 9098650073183939171}
   - {fileID: 9139691710002369642}
   - {fileID: 9041450583069759625}
+  - {fileID: 3298668507647494577}
 --- !u!114 &2927909416999064678
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -95,6 +96,61 @@ MonoBehaviour:
     m_Value: 0.55
   highlightsEnd:
     m_OverrideState: 0
+    m_Value: 1
+--- !u!114 &3298668507647494577
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a074ec59f6e910b4e8c49f57e56cf95a, type: 3}
+  m_Name: VolumetricFogVolumeComponent
+  m_EditorClassIdentifier: 
+  active: 1
+  distance:
+    m_OverrideState: 1
+    m_Value: 128
+  baseHeight:
+    m_OverrideState: 1
+    m_Value: 0
+  maximumHeight:
+    m_OverrideState: 1
+    m_Value: 50
+  density:
+    m_OverrideState: 1
+    m_Value: 0.002
+  attenuationDistance:
+    m_OverrideState: 1
+    m_Value: 128
+  tint:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  mainLightAnisotropy:
+    m_OverrideState: 1
+    m_Value: 0.807
+  mainLightScattering:
+    m_OverrideState: 1
+    m_Value: 0.15
+  additionalLightsAnisotropy:
+    m_OverrideState: 1
+    m_Value: 0.081
+  additionalLightsScattering:
+    m_OverrideState: 1
+    m_Value: 1
+  additionalLightsRadius:
+    m_OverrideState: 1
+    m_Value: 0.2
+  maxSteps:
+    m_OverrideState: 1
+    m_Value: 64
+  blurIterations:
+    m_OverrideState: 1
+    m_Value: 2
+  enabled:
+    m_OverrideState: 1
     m_Value: 1
 --- !u!114 &4479285672450741484
 MonoBehaviour:
