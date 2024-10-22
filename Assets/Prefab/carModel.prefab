@@ -845,7 +845,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSpeed: 1250
-  rb: {fileID: 3943383736055077191}
+  turnSpeed: 100
+  downForce: 20
 --- !u!54 &3943383736055077191
 Rigidbody:
   m_ObjectHideFlags: 0

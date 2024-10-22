@@ -1,73 +1,103 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using UnityEditor;
 using UnityEngine;
 
 public class CarMove : MonoBehaviour
 {
-  public float carSpeed = 0f;
-  public float turnSpeed;
-  [SerializeField] Rigidbody rb;
+  public float carSpeed = 10f;      // Speed of the car
+  public float turnSpeed = 100f;
+  public float downForce = 10f;   // Speed of rotation
+  private Rigidbody rb;
   private Vector3 initForward;
-  private float rotationAngle;
-
+  private Quaternion targetRotation;
+  private bool isTurningLeft = false;
+  private bool isTurningRight = false;
+  private float rotationAngle = 90f;  // Angle to turn
 
   void Start()
   {
     rb = GetComponent<Rigidbody>();
     initForward = transform.forward;
-    rotationAngle = transform.rotation.y;
-  }
-  void Update()
-  {
-    carForward();
-    carTurn();
   }
 
-  void OnCollisionEnter(Collision col)
+  void Update()
   {
-    if (col.gameObject.tag == "Player")
+    carForward(); // Move the car forward continuously
+    handleCarTurn();
+  }
+  void FixedUpdate()
+  {
+    ApplyDownForce();
+  }
+
+  void handleCarTurn()
+  {
+    // Handle turning smoothly
+    if (isTurningLeft)
     {
-      Destroy(gameObject);
+      transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+      if (Quaternion.Angle(transform.rotation, targetRotation) < 0.1f)
+      {
+        isTurningLeft = false;  // Stop turning once the target rotation is reached
+      }
     }
-    else if (col.gameObject.tag == "wall")
+
+    if (isTurningRight)
     {
-      Destroy(gameObject);
+      transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+      if (Quaternion.Angle(transform.rotation, targetRotation) < 0.1f)
+      {
+        isTurningRight = false;  // Stop turning once the target rotation is reached
+      }
     }
   }
+  void OnCollisionEnter(Collision col)
+  {
+    if (col.gameObject.tag == "Player" || col.gameObject.tag == "wall")
+    {
+      Destroy(gameObject); // Destroy the car when it hits a player or a wall
+    }
+  }
+
   void OnTriggerEnter(Collider col)
   {
     if (col.gameObject.tag == "leftTurn")
     {
-      StartCoroutine(turnLeft());
-      Destroy(col.gameObject);
+      turnLeft();
+      Destroy(col.gameObject); // Destroy the trigger after turning
     }
-    if (col.gameObject.tag == "rightTurn")
+    else if (col.gameObject.tag == "rightTurn")
     {
-      StartCoroutine(turnRight());
-      Destroy(col.gameObject);
+      turnRight();
+      Destroy(col.gameObject); // Destroy the trigger after turning
     }
   }
-  void carTurn()
-  {
-    transform.Rotate(0, rotationAngle, 0);
-  }
-  IEnumerator turnLeft()
-  {
-    while (rotationAngle % 90 != 0)
-      yield return rotationAngle -= turnSpeed;
 
-  }
-  IEnumerator turnRight()
+  void turnLeft()
   {
-    while (rotationAngle % 90 != 0)
-      yield return rotationAngle += turnSpeed;
+    if (!isTurningLeft)
+    {
+      isTurningLeft = true;
+      targetRotation = Quaternion.Euler(transform.eulerAngles + new Vector3(0, -rotationAngle, 0)); // Rotate 90 degrees to the left
+    }
   }
+
+  void turnRight()
+  {
+    if (!isTurningRight)
+    {
+      isTurningRight = true;
+      targetRotation = Quaternion.Euler(transform.eulerAngles + new Vector3(0, rotationAngle, 0)); // Rotate 90 degrees to the right
+    }
+  }
+
   void carForward()
   {
-    rb.velocity = initForward * carSpeed * Time.deltaTime;
+    rb.velocity = transform.forward * carSpeed * Time.deltaTime; // Move forward in the current facing direction
+  }
+  void ApplyDownForce()
+  {
+    // Apply downward force to keep the car on the ground
+    rb.AddForce(-transform.up * downForce, ForceMode.Acceleration);
   }
 }
-
-
