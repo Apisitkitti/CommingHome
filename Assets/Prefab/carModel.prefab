@@ -813,6 +813,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd6538785adbde14ea7fffa07dd703ac, type: 3}
       insertIndex: -1
       addedObject: {fileID: -2844045087983905314}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd6538785adbde14ea7fffa07dd703ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8205392049742783685}
     - targetCorrespondingSourceObject: {fileID: 635547659545568360, guid: cd6538785adbde14ea7fffa07dd703ac, type: 3}
       insertIndex: -1
       addedObject: {fileID: 802223527229290872}
@@ -845,7 +848,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSpeed: 1250
-  turnSpeed: 100
   downForce: 20
 --- !u!54 &3943383736055077191
 Rigidbody:
@@ -1002,6 +1004,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-8205392049742783685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4225410675352136644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fa57745bc92124fb1242170c5a8637, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  downForce: 10
+  turnSpeed: 200
 --- !u!1 &4518005929073423101 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 635547659545568360, guid: cd6538785adbde14ea7fffa07dd703ac, type: 3}
