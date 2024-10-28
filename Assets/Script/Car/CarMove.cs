@@ -5,7 +5,6 @@ using UnityEngine;
 public class CarMove : MonoBehaviour
 {
   public float carSpeed = 10f;      // Speed of the car
-  public float downForce = 10f;   // Speed of rotation
   private Rigidbody rb;
 
 
