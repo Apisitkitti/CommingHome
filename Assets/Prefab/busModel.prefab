@@ -870,7 +870,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSpeed: 1000
-  downForce: 20
 --- !u!54 &1194796933040429142
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -910,5 +909,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95fa57745bc92124fb1242170c5a8637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  downForce: 10
-  turnSpeed: 200
+  downForce: 100
+  turnSpeed: 100
