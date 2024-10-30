@@ -5,7 +5,6 @@ using UnityEngine;
 public class CarTurn : MonoBehaviour
 {
   private Quaternion targetRotation;
-  public float downForce = 10f;
   public float turnSpeed = 100f;
   private float rotationAngle = 90f;
   private bool isTurningLeft = false;
@@ -24,10 +23,7 @@ public class CarTurn : MonoBehaviour
 
     handleCarTurn();
   }
-  void FixedUpdate()
-  {
-    ApplyDownForce();
-  }
+
   void handleCarTurn()
   {
     // Handle turning smoothly
@@ -80,9 +76,5 @@ public class CarTurn : MonoBehaviour
       targetRotation = Quaternion.Euler(transform.eulerAngles + new Vector3(0, rotationAngle, 0)); // Rotate 90 degrees to the right
     }
   }
-  void ApplyDownForce()
-  {
-    // Apply downward force to keep the car on the ground
-    rb.AddForce(-transform.up * downForce, ForceMode.Acceleration);
-  }
+
 }

@@ -847,7 +847,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afb23b0466e00654383e92ea1d33b918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carSpeed: 1250
+  carSpeed: 700
+  downForce: 50
 --- !u!54 &3943383736055077191
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1015,8 +1016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95fa57745bc92124fb1242170c5a8637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  downForce: 50
-  turnSpeed: 20
+  turnSpeed: 100
 --- !u!1 &4518005929073423101 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 635547659545568360, guid: cd6538785adbde14ea7fffa07dd703ac, type: 3}

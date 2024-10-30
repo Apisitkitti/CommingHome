@@ -6,18 +6,19 @@ public class CarMove : MonoBehaviour
 {
   public float carSpeed = 10f;      // Speed of the car
   private Rigidbody rb;
-
+  public float downForce = 10f;
 
   void Start()
   {
     rb = GetComponent<Rigidbody>();
 
   }
-
-  void Update()
+  void FixedUpdate()
   {
-    carForward(); // Move the car forward continuously
+    ApplyDownForce();
+    carForward();
   }
+
 
   void OnCollisionEnter(Collision col)
   {
@@ -33,5 +34,9 @@ public class CarMove : MonoBehaviour
   {
     rb.velocity = transform.forward * carSpeed * Time.deltaTime; // Move forward in the current facing direction
   }
-
+  void ApplyDownForce()
+  {
+    // Apply downward force to keep the car on the ground
+    rb.AddForce(-transform.up * downForce, ForceMode.Acceleration);
+  }
 }
