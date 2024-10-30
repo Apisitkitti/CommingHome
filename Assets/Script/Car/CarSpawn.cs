@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
+using UnityEngine.Splines;
 
 public class CarSpawn : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class CarSpawn : MonoBehaviour
   // [SerializeField] List<GameObject> spawnerGameObject;
   [SerializeField] List<GameObject> carPrefab;
   [SerializeField] List<GameObject> carThatSpawnOnThemap;
+  [SerializeField] MovFollowSpilnes splineMove;
 
 
   [Header("ControlTrafffic start with one ")]
@@ -66,6 +68,7 @@ public class CarSpawn : MonoBehaviour
 
   void carSpawnAndAddList(int spawnerNumber)
   {
+    splineMove.spawnChoosed = spawnerNumber;
     GameObject carSpawn = Instantiate(carPrefab[spawnNumber()], carSpawner[spawnerNumber].position, carSpawner[spawnerNumber].rotation);
     carThatSpawnOnThemap.Add(carSpawn);
   }

@@ -381,6 +381,7 @@ MonoBehaviour:
   - {fileID: 3284635701766062060, guid: 1ee82135b9ea44e4bad9488a28e548b9, type: 3}
   - {fileID: 4225410675352136644, guid: 179b04831ca1bbf449a8ec8d63b01008, type: 3}
   carThatSpawnOnThemap: []
+  splineMove: {fileID: 0}
   trafficControl: {fileID: 11400000, guid: 361ed4066016eeb4da8158b88c8bca7d, type: 2}
   controlTrafficSpawn: 1
   spawnTimeSetting: 2
@@ -469,15 +470,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36672910}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.66, y: 0.3, z: -6.66}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -41.1, y: 0.24000001, z: 8.93}
   m_LocalScale: {x: 70, y: 70, z: 70}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1917383589}
   - {fileID: 213226592}
   - {fileID: 245004181}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 679984230}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &59209087
 GameObject:
@@ -3899,6 +3900,7 @@ MonoBehaviour:
   - {fileID: 3284635701766062060, guid: 1ee82135b9ea44e4bad9488a28e548b9, type: 3}
   - {fileID: 4225410675352136644, guid: 179b04831ca1bbf449a8ec8d63b01008, type: 3}
   carThatSpawnOnThemap: []
+  splineMove: {fileID: 0}
   trafficControl: {fileID: 11400000, guid: 361ed4066016eeb4da8158b88c8bca7d, type: 2}
   controlTrafficSpawn: 1
   spawnTimeSetting: 2
@@ -3987,15 +3989,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446512885}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 5.56, y: 0.26, z: -32.99}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -7.8799996, y: 0.19999999, z: -17.400002}
   m_LocalScale: {x: 70, y: 70, z: 70}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1378991536}
   - {fileID: 1741790992}
   - {fileID: 1197925580}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 679984230}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &446723623
 GameObject:
@@ -4692,6 +4694,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493287817}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &493391322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 493391323}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &493391323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493391322}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -81.3, y: 0.07000004, z: -3.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1994371317}
+  - {fileID: 800204340}
+  - {fileID: 1056895445}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &500459633
 GameObject:
   m_ObjectHideFlags: 0
@@ -5372,6 +5408,7 @@ MonoBehaviour:
   - {fileID: 3284635701766062060, guid: 1ee82135b9ea44e4bad9488a28e548b9, type: 3}
   - {fileID: 4225410675352136644, guid: 179b04831ca1bbf449a8ec8d63b01008, type: 3}
   carThatSpawnOnThemap: []
+  splineMove: {fileID: 0}
   trafficControl: {fileID: 11400000, guid: 361ed4066016eeb4da8158b88c8bca7d, type: 2}
   controlTrafficSpawn: 1
   spawnTimeSetting: 2
@@ -5460,15 +5497,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564677513}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -15.22, y: 0.52, z: -34.19}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -28.66, y: 0.45999998, z: -18.599998}
   m_LocalScale: {x: 70, y: 70, z: 70}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1708749102}
   - {fileID: 987391748}
   - {fileID: 1360575444}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 679984230}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &567636927
 GameObject:
@@ -5483,7 +5520,7 @@ GameObject:
   - component: {fileID: 567636929}
   - component: {fileID: 567636928}
   m_Layer: 0
-  m_Name: pCylinder224 (1)
+  m_Name: centerTrafficLight2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5575,14 +5612,14 @@ Transform:
   m_GameObject: {fileID: 567636927}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.44, y: 0.06, z: -15.59}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 70, y: 70, z: 70}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1715014120}
   - {fileID: 289873835}
   - {fileID: 130830481}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 679984230}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &573653789
 GameObject:
@@ -7087,6 +7124,43 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668862589}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &679984229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 679984230}
+  m_Layer: 0
+  m_Name: trafficForActiveSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &679984230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679984229}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.44, y: 0.06, z: -15.59}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1672254773}
+  - {fileID: 564677518}
+  - {fileID: 446512890}
+  - {fileID: 36672915}
+  - {fileID: 1820050971}
+  - {fileID: 567636931}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &700541533
 GameObject:
   m_ObjectHideFlags: 0
@@ -7571,15 +7645,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800204339}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.38, y: 0.07000004, z: -120.27}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 67.920006, y: 0, z: -117.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1222804582}
   - {fileID: 358603228}
   - {fileID: 824680745}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 493391323}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &806925300
 GameObject:
@@ -9438,8 +9512,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056895444}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -81.3, y: 0.07000004, z: -3.1}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9448,7 +9522,7 @@ Transform:
   - {fileID: 92198489}
   - {fileID: 1393937266}
   - {fileID: 792552288}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 493391323}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1059823662
 GameObject:
@@ -15295,11 +15369,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSpawner:
+  - {fileID: 792552288}
   - {fileID: 1393937266}
+  - {fileID: 92198489}
+  - {fileID: 462317156}
+  - {fileID: 1279780723}
   carPrefab:
   - {fileID: 3284635701766062060, guid: 1ee82135b9ea44e4bad9488a28e548b9, type: 3}
   - {fileID: 4225410675352136644, guid: 179b04831ca1bbf449a8ec8d63b01008, type: 3}
   carThatSpawnOnThemap: []
+  splineMove: {fileID: 5606659755195541379, guid: 179b04831ca1bbf449a8ec8d63b01008, type: 3}
   trafficControl: {fileID: 11400000, guid: 361ed4066016eeb4da8158b88c8bca7d, type: 2}
   controlTrafficSpawn: 1
   spawnTimeSetting: 2
@@ -15388,15 +15467,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672254768}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.66, y: 0.3, z: -1.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -41.1, y: 0.24000001, z: 14.190001}
   m_LocalScale: {x: 70, y: 70, z: 70}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1968691646}
   - {fileID: 1353141165}
   - {fileID: 1215663672}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 679984230}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1672460272
 GameObject:
@@ -18016,7 +18095,7 @@ GameObject:
   - component: {fileID: 1820050969}
   - component: {fileID: 1820050968}
   m_Layer: 0
-  m_Name: pCylinder224
+  m_Name: centerTrafficLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18108,14 +18187,14 @@ Transform:
   m_GameObject: {fileID: 1820050967}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.44, y: 0.06, z: -16.18}
+  m_LocalPosition: {x: 0, y: 0, z: -0.59000015}
   m_LocalScale: {x: 70, y: 70, z: 70}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 245197894}
   - {fileID: 541403019}
   - {fileID: 156678961}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 679984230}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1831898991
 GameObject:
@@ -19669,15 +19748,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994371316}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 5.1, y: 0.07, z: 47.835495}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 86.4, y: 0, z: 50.935493}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1293582747}
   - {fileID: 294121060}
   - {fileID: 2063426023}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 493391323}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1995774731 stripped
 GameObject:
@@ -21372,14 +21451,7 @@ SceneRoots:
   - {fileID: 1059823664}
   - {fileID: 1174392186}
   - {fileID: 1732859212}
-  - {fileID: 1994371317}
-  - {fileID: 800204340}
-  - {fileID: 1056895445}
+  - {fileID: 493391323}
   - {fileID: 1896814071}
-  - {fileID: 1672254773}
-  - {fileID: 564677518}
-  - {fileID: 446512890}
-  - {fileID: 36672915}
-  - {fileID: 1820050971}
-  - {fileID: 567636931}
+  - {fileID: 679984230}
   - {fileID: 839777491}
