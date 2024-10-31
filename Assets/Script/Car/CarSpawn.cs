@@ -32,6 +32,10 @@ public class CarSpawn : MonoBehaviour
 
   void Start()
   {
+    if (splineMove == null)
+    {
+      return;
+    }
     for (int index = 0; index < trafficControl.carSpawnEnable.Count; index++)
     {
       trafficControl.carSpawnEnable[index] = false;
