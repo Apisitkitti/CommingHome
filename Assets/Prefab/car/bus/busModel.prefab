@@ -929,9 +929,6 @@ MonoBehaviour:
   spline:
   - {fileID: 2677092720863590122, guid: 1483d228aab08854eb2ecf2d859390ac, type: 3}
   - {fileID: 4676995950263236397, guid: e64db82a2644d7145b29d55d94f063e5, type: 3}
-  - {fileID: 7645288936873730470, guid: 0947cee6875f75446830860f7e3edcc2, type: 3}
-  - {fileID: 4030909502845131617, guid: 591250d48c5f036449650f20efda9559, type: 3}
-  - {fileID: 9030211490444433483, guid: c7740abe9bcc510489d6cbd42a042a84, type: 3}
   speed: 10
   spawnChoosed: 0
   smoothTime: 0.3
