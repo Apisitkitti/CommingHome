@@ -7,6 +7,7 @@ public class hitCheck : MonoBehaviour
 {
   [SerializeField] UiSetter uiSetter;
   [SerializeField] DeathStorySet normalStorySet;
+  [SerializeField] Transform warpZone;
   void OnCollisionEnter(Collision col)
   {
     if (col.gameObject.tag == "Car" || col.gameObject.tag == "Bus")
@@ -32,6 +33,10 @@ public class hitCheck : MonoBehaviour
       dontWantErrorFunction();
       uiSetter.setOverAllBusUi(true);
     }
+    if (col.gameObject.tag == "bridgeWarp")
+    {
+      col.transform.position = warpZone.position;
+    }
   }
   void OnTriggerExit(Collider col)
   {
@@ -45,5 +50,6 @@ public class hitCheck : MonoBehaviour
   void dontWantErrorFunction()
   {
     if (uiSetter == null) return;
+    if (warpZone == null) return;
   }
 }

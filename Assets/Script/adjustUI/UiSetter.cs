@@ -21,7 +21,6 @@ public class UiSetter : MonoBehaviour
   }
   public void setOverAllBusUi(bool isActive)
   {
-
     wrapBusButton.SetActive(isActive);
   }
 }
