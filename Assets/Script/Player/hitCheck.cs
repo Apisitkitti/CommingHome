@@ -35,7 +35,7 @@ public class hitCheck : MonoBehaviour
     }
     if (col.gameObject.tag == "bridgeWarp")
     {
-      col.transform.position = warpZone.position;
+      
     }
   }
   void OnTriggerExit(Collider col)
