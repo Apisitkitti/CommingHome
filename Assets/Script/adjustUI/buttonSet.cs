@@ -8,6 +8,7 @@ public class buttonSet : MonoBehaviour
   [SerializeField] UiSetter busUi;
   [SerializeField] OVRPlayerController VrMove;
   float indexSpeed;
+  public bool Clickwaitbus = false;
   void Start()
   {
     indexSpeed = VrMove.Acceleration;
@@ -16,11 +17,13 @@ public class buttonSet : MonoBehaviour
   {
     setActiveBus(true);
     VrMove.Acceleration = 0;
+    Clickwaitbus = true;
   }
   public void dontWaitBus()
   {
     setActiveBus(false);
     VrMove.Acceleration = indexSpeed;
+    Clickwaitbus = false;
   }
   void setActiveBus(bool isActive)
   {
