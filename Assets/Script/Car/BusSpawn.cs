@@ -8,7 +8,7 @@ public class BusSpawn : MonoBehaviour
   [SerializeField] GameObject busPrefab;
   [SerializeField] Transform busSpawn;
   [SerializeField] float timeSpawn;
-  private float currentTime;
+  [SerializeField] public float currentTime;
   private float endTime = 0;
   bool hasSpawn = true;
   void Start()
