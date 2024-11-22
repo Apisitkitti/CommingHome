@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f2faeb0f99a864e9b2ced647799ce8, type: 3}
+  m_Name: SettingsWindowData
+  m_EditorClassIdentifier: 
+  drawWaypoints: 1
+  drawLaneChange: 1
+  createRoadSave:
+    viewOtherRoads: 0
+    viewRoadsSettings:
+      viewLanes: 0
+      viewWaypoints: 0
+      viewLaneChanges: 0
+    leftSideTraffic: 0
+  viewRoadsSave:
+    viewRoadsSettings:
+      viewLanes: 1
+      viewWaypoints: 1
+      viewLaneChanges: 0
+  connectRoadsSave:
+    viewRoadsSettings:
+      viewLanes: 0
+      viewWaypoints: 1
+      viewLaneChanges: 0
+    waypointDistance: 4
+  roadDefaults:
+    nrOfLanes: 4
+    laneWidth: 4
+    waypointDistance: 4
+  roadColors:
+    textColor: {r: 1, g: 0.77521867, b: 0, a: 1}
+    roadColor: {r: 0, g: 1, b: 0, a: 1}
+    laneColor: {r: 0.9427507, g: 1, b: 0, a: 1}
+    laneChangeColor: {r: 1, g: 0, b: 1, a: 1}
+    connectorLaneColor: {r: 1, g: 0.120237574, b: 0, a: 1}
+    anchorPointColor: {r: 1, g: 1, b: 1, a: 1}
+    controlPointColor: {r: 1, g: 0, b: 0, a: 1}
+    roadConnectorColor: {r: 0, g: 1, b: 1, a: 1}
+    selectedRoadConnectorColor: {r: 0, g: 1, b: 0, a: 1}
+    waypointColor: {r: 1, g: 0.9584457, b: 0, a: 1}
+    selectedWaypointColor: {r: 0, g: 1, b: 0, a: 1}
+    disconnectedColor: {r: 1, g: 0.5458693, b: 0, a: 1}
+    prevWaypointColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    speedColor: {r: 1, g: 1, b: 1, a: 1}
+    carsColor: {r: 0, g: 1, b: 0, a: 1}
+    priorityColor: {r: 0, g: 0, b: 0, a: 1}
+    complexGiveWayColor: {r: 0, g: 0, b: 0, a: 1}
+  carRoutesSave:
+    routesColor:
+    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
+    active: 0101
+  allWaypointsSettings:
+    showConnections: 1
+    showOtherLanes: 0
+    showSpeed: 0
+    showPriority: 0
+    showCars: 0
+  disconnectedWaypointsSettings:
+    showConnections: 1
+    showOtherLanes: 0
+    showSpeed: 0
+    showPriority: 0
+    showCars: 0
+  carEditedWaypointsSettings:
+    showConnections: 1
+    showOtherLanes: 1
+    showSpeed: 1
+    showPriority: 1
+    showCars: 1
+  pathProblemsWaypointsSettings:
+    showConnections: 0
+    showOtherLanes: 0
+    showSpeed: 0
+    showPriority: 0
+    showCars: 0
+  editRoadSave:
+    viewRoadsSettings:
+      viewLanes: 0
+      viewWaypoints: 1
+      viewLaneChanges: 1
+    moveTool: 1
+    maxSpeed: 50
+    globalCarList: 
+  speedEditedWaypointsSettings:
+    showConnections: 0
+    showOtherLanes: 0
+    showSpeed: 0
+    showPriority: 0
+    showCars: 0
+  priorityEditedWaypointsSettings:
+    showConnections: 0
+    showOtherLanes: 0
+    showSpeed: 0
+    showPriority: 0
+    showCars: 0
+  giveWayWaypointsSettings:
+    showConnections: 0
+    showOtherLanes: 0
+    showSpeed: 0
+    showPriority: 0
+    showCars: 0
+  stopWaypointsSettings:
+    showConnections: 0
+    showOtherLanes: 0
+    showSpeed: 0
+    showPriority: 0
+    showCars: 0
+  speedRoutesSave:
+    routesColor:
+    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 1, g: 0.0812667, b: 0, a: 1}
+    active: 0101
+  waypointPrioritySave:
+    priorityColor:
+    - {r: 1, g: 1, b: 1, a: 1}
+    active: 01
+  intersectionSave:
+    showAll: 1
+    showExit: 1
+    showPedestrians: 1
+    showDirection: 1
+    priorityColor: {r: 0, g: 1, b: 0, a: 1}
+    lightsColor: {r: 0, g: 1, b: 1, a: 1}
+    stopWaypointsColor: {r: 1, g: 0, b: 0, a: 1}
+    exitWaypointsColor: {r: 0, g: 1, b: 0, a: 1}
+  pathFindingSave:
+    enabled: 0
+    penaltyColor:
+    - {r: 1, g: 1, b: 1, a: 1}
+    active: 01

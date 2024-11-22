@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7f358ff3a1f894c9af811ceb486359, type: 3}
   m_Name: LayerSetupData
   m_EditorClassIdentifier: 
-  edited: 0
+  edited: 1
   roadLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 64
   trafficLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 128
   buildingsLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 256
   obstaclesLayers:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 512
   playerLayers:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 1024
