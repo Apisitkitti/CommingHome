@@ -25,7 +25,7 @@ MonoBehaviour:
     viewRoadsSettings:
       viewLanes: 1
       viewWaypoints: 1
-      viewLaneChanges: 0
+      viewLaneChanges: 1
   connectRoadsSave:
     viewRoadsSettings:
       viewLanes: 0
@@ -33,7 +33,7 @@ MonoBehaviour:
       viewLaneChanges: 0
     waypointDistance: 4
   roadDefaults:
-    nrOfLanes: 4
+    nrOfLanes: 2
     laneWidth: 4
     waypointDistance: 4
   roadColors:
