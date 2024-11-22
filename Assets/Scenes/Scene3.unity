@@ -64171,7 +64171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1545695824}
-  nrOfVehicles: 15
+  nrOfVehicles: 30
   vehiclePool: {fileID: 11400000, guid: 4af10e1813945394ca103ca811b3beb2, type: 2}
   activeSquareLevels: 2
   minDistanceToAdd: 2
