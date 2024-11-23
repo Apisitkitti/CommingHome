@@ -799,12 +799,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1194796933040429142}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -8495838974511450205}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8732729809986568110}
     - targetCorrespondingSourceObject: {fileID: -5072913840731765150, guid: 0dbf48809e7b1dc4d9ae0ba9f51f6ec8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3750417535598082395}
@@ -901,37 +895,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-8495838974511450205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3284635701766062060}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95fa57745bc92124fb1242170c5a8637, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnSpeed: 100
---- !u!114 &8732729809986568110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3284635701766062060}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e28698fb3cc22246ac76089afa5c672, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spline:
-  - {fileID: 2677092720863590122, guid: 1483d228aab08854eb2ecf2d859390ac, type: 3}
-  - {fileID: 4676995950263236397, guid: e64db82a2644d7145b29d55d94f063e5, type: 3}
-  - {fileID: 7645288936873730470, guid: 0947cee6875f75446830860f7e3edcc2, type: 3}
-  - {fileID: 4030909502845131617, guid: 591250d48c5f036449650f20efda9559, type: 3}
-  - {fileID: 9030211490444433483, guid: c7740abe9bcc510489d6cbd42a042a84, type: 3}
-  speed: 10
-  spawnChoosed: 0
-  smoothTime: 0.3

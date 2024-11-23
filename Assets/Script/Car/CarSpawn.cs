@@ -12,7 +12,6 @@ public class CarSpawn : MonoBehaviour
   // [SerializeField] List<GameObject> spawnerGameObject;
   [SerializeField] List<GameObject> carPrefab;
   [SerializeField] List<GameObject> carThatSpawnOnThemap;
-  [SerializeField] List<MovFollowSpilnes> splineMove;
 
 
   [Header("ControlTrafffic start with one ")]
@@ -32,10 +31,6 @@ public class CarSpawn : MonoBehaviour
 
   void Start()
   {
-    if (splineMove == null)
-    {
-      return;
-    }
     for (int index = 0; index < trafficControl.carSpawnEnable.Count; index++)
     {
       trafficControl.carSpawnEnable[index] = false;
@@ -73,7 +68,6 @@ public class CarSpawn : MonoBehaviour
   void carSpawnAndAddList(int spawnerNumber)
   {
     int randomNumber = UnityEngine.Random.Range(0, 1);
-    splineMove[randomNumber].spawnChoosed = spawnerNumber;
     Debug.Log(randomNumber);
     GameObject carSpawn = Instantiate(carPrefab[spawnNumber()], carSpawner[spawnerNumber].position, carSpawner[spawnerNumber].rotation);
     carThatSpawnOnThemap.Add(carSpawn);
