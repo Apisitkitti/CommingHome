@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallSedanYellow1
       objectReference: {fileID: 0}
+    - target: {fileID: 5402269750845898110, guid: 436a70b435c93d74e9d4b0f983c528ea, type: 3}
+      propertyPath: DistReduceAt
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5711341339721306818, guid: 436a70b435c93d74e9d4b0f983c528ea, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 

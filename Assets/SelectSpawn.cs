@@ -24,7 +24,7 @@ public class SelectSpawn : MonoBehaviour
             Transform spawnPoint = spawnPoints[currentSpawnIndex];
 
             // ใช้ API.AddVehicle พร้อม Callback
-            API.AddVehicle(spawnPoint.position, vehicleType, OnVehicleSpawned);
+            API.AddVehicle(spawnPoint.position, vehicleType);
 
             // หมุนไปยังจุด Spawn ถัดไป
             currentSpawnIndex = (currentSpawnIndex + 1) % spawnPoints.Length;
@@ -34,8 +34,8 @@ public class SelectSpawn : MonoBehaviour
     }
 
     // Callback เมื่อรถ Spawn สำเร็จ
-    private void OnVehicleSpawned(VehicleComponent vehicle, int index)
+   /* private void OnVehicleSpawned(VehicleComponent vehicle, int index)
     {
         Debug.Log($"Vehicle spawned: {vehicle.name} at index {index}");
-    }
+    }*/
 }
