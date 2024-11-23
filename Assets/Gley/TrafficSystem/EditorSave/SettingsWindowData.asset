@@ -33,7 +33,7 @@ MonoBehaviour:
       viewLaneChanges: 0
     waypointDistance: 4
   roadDefaults:
-    nrOfLanes: 2
+    nrOfLanes: 4
     laneWidth: 4
     waypointDistance: 4
   roadColors:
@@ -117,9 +117,11 @@ MonoBehaviour:
     showCars: 0
   speedRoutesSave:
     routesColor:
+    - {r: 0.16216493, g: 1, b: 0, a: 1}
     - {r: 1, g: 1, b: 1, a: 1}
-    - {r: 1, g: 0.0812667, b: 0, a: 1}
-    active: 0101
+    - {r: 0.040236473, g: 1, b: 0, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
+    active: 01010101
   waypointPrioritySave:
     priorityColor:
     - {r: 1, g: 1, b: 1, a: 1}
