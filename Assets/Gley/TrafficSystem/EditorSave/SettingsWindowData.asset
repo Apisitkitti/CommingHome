@@ -33,8 +33,8 @@ MonoBehaviour:
       viewLaneChanges: 0
     waypointDistance: 4
   roadDefaults:
-    nrOfLanes: 4
-    laneWidth: 4
+    nrOfLanes: 2
+    laneWidth: 3
     waypointDistance: 4
   roadColors:
     textColor: {r: 1, g: 0.77521867, b: 0, a: 1}
@@ -60,13 +60,13 @@ MonoBehaviour:
     - {r: 1, g: 1, b: 1, a: 1}
     active: 0101
   allWaypointsSettings:
-    showConnections: 1
+    showConnections: 0
     showOtherLanes: 0
     showSpeed: 0
-    showPriority: 0
+    showPriority: 1
     showCars: 0
   disconnectedWaypointsSettings:
-    showConnections: 1
+    showConnections: 0
     showOtherLanes: 0
     showSpeed: 0
     showPriority: 0
@@ -98,11 +98,11 @@ MonoBehaviour:
     showPriority: 0
     showCars: 0
   priorityEditedWaypointsSettings:
-    showConnections: 0
-    showOtherLanes: 0
-    showSpeed: 0
-    showPriority: 0
-    showCars: 0
+    showConnections: 1
+    showOtherLanes: 1
+    showSpeed: 1
+    showPriority: 1
+    showCars: 1
   giveWayWaypointsSettings:
     showConnections: 0
     showOtherLanes: 0
@@ -124,8 +124,10 @@ MonoBehaviour:
     active: 01010101
   waypointPrioritySave:
     priorityColor:
+    - {r: 1, g: 0, b: 0, a: 1}
     - {r: 1, g: 1, b: 1, a: 1}
-    active: 01
+    - {r: 1, g: 0, b: 0.88550186, a: 1}
+    active: 010101
   intersectionSave:
     showAll: 1
     showExit: 0

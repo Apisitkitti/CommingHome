@@ -6,7 +6,7 @@ public class DestroyCar : MonoBehaviour
 {
      void OnCollisionEnter(Collision col)
   {
-    if (col.gameObject.tag == "Player" || col.gameObject.tag == "Car")
+    if (col.gameObject.tag == "Player" || col.gameObject.tag == "Car"|| col.gameObject.tag == "Bus")
     {
         API.RemoveVehicle(col.gameObject);
     }
