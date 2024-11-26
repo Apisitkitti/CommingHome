@@ -6523,6 +6523,7 @@ MonoBehaviour:
   uiSetter: {fileID: 0}
   normalStorySet: {fileID: 11400000, guid: cc5e2cc9660726b498d035529ed5a45a, type: 2}
   warpZone: {fileID: 0}
+  sceneChange: {fileID: 1292798492}
 --- !u!1 &587013688
 GameObject:
   m_ObjectHideFlags: 0
@@ -13720,6 +13721,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154938892}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1159365665 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2112914172117747059, guid: cd22b0fac9784d14d98e16dc1493af10, type: 3}
+  m_PrefabInstance: {fileID: 313328345062593240}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1162353618 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6541723359008674877, guid: 9f59c47024c54bf45b10bad4e4a80146, type: 3}
@@ -15074,12 +15080,25 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 737300756099939080, guid: cd22b0fac9784d14d98e16dc1493af10, type: 3}
   m_PrefabInstance: {fileID: 313328345062593240}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1159365665}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad74d567a197660439210c5c3b460a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1292798492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159365665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e3a482198622e94682cbea282f46bf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneNumber: {fileID: 11400000, guid: 142680a1983542e488a3e1daf2deb557, type: 2}
 --- !u!1 &1301382296 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5650545756509992725, guid: 9f59c47024c54bf45b10bad4e4a80146, type: 3}
@@ -23074,7 +23093,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2112914172117747059, guid: cd22b0fac9784d14d98e16dc1493af10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1292798492}
   m_SourcePrefab: {fileID: 100100000, guid: cd22b0fac9784d14d98e16dc1493af10, type: 3}
 --- !u!33 &379845248484668582
 MeshFilter:

@@ -1161,6 +1161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e3a482198622e94682cbea282f46bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneNumber: {fileID: 11400000, guid: 142680a1983542e488a3e1daf2deb557, type: 2}
 --- !u!4 &389006194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 462066, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
@@ -1234,8 +1235,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
-  cameraSentivity: 30
+  cameraSensitivity: 100
   walkingSound: {fileID: 0}
+  playerCamera: {fileID: 0}
 --- !u!114 &582424604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1250,6 +1252,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiSetter: {fileID: 0}
   normalStorySet: {fileID: 11400000, guid: cc5e2cc9660726b498d035529ed5a45a, type: 2}
+  warpZone: {fileID: 0}
+  sceneChange: {fileID: 0}
 --- !u!114 &615445983 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 11400020, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}

@@ -8,6 +8,8 @@ public class hitCheck : MonoBehaviour
   [SerializeField] UiSetter uiSetter;
   [SerializeField] DeathStorySet normalStorySet;
   [SerializeField] Transform warpZone;
+  [SerializeField]
+  SceneManage sceneChange;
 
   void Start()
   {
@@ -31,7 +33,7 @@ public class hitCheck : MonoBehaviour
   {
     if (col.gameObject.tag == "StoryHit")
     {
-      SceneManager.LoadScene("BusScene");
+      sceneChange.nextScene();
     }
   }
   void OnTriggerStay(Collider col)
