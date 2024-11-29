@@ -34,14 +34,6 @@ public class hitCheck : MonoBehaviour
       dontWantErrorFunction();
       uiSetter.setOverAllBusUi(true);
     }
-    if (col.gameObject.tag == "bridgeWarp")
-    {
-      uiSetter.OnTheBridegeUi(true);
-    }
-    if (col.gameObject.tag == "ontheBridgeWarp")
-    {
-      uiSetter.OnTheBridegeUi(true);
-    }
   }
   void OnTriggerExit(Collider col)
   {
@@ -49,14 +41,6 @@ public class hitCheck : MonoBehaviour
     {
       dontWantErrorFunction();
       uiSetter.setOverAllBusUi(false);
-    }
-    if (col.gameObject.tag == "bridgeWarp")
-    {
-      uiSetter.underTheBridegeUi(false);
-    }
-    if (col.gameObject.tag == "onTheBridgeWarp")
-    {
-      uiSetter.OnTheBridegeUi(false);
     }
   }
 

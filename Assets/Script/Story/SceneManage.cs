@@ -11,12 +11,12 @@ public class SceneManage : MonoBehaviour
   }
   public void nextScene()
   {
-    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     sceneNumber.sceneNumber += 1;
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
   }
   public void previousScene()
   {
-    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     sceneNumber.sceneNumber -= 1;
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
   }
 }

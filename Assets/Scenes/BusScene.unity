@@ -1216,11 +1216,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   busSpawn: {fileID: 801563581}
   buttonSet: {fileID: 1787721987}
-  TimeJumpScaredSound: 36
+  TimeJumpScaredSound: 40
   sounds:
   - {fileID: 8300000, guid: 13ad3709b115fc44c90609cd10d7e120, type: 3}
   - {fileID: 8300000, guid: 6846d6f4a653e9041984c8b365a516cf, type: 3}
   JumpScaredSoundPlay: 0
+  storyUi: {fileID: 801563583}
+  eventStory: {fileID: 11400000, guid: b9bea13c46abc364e9a22e66299de1f5, type: 2}
 --- !u!82 &181005605
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3481,6 +3483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   story: {fileID: 0}
   storySetter: {fileID: 0}
+  storyCheckNumber: 0
 --- !u!1 &459064509
 GameObject:
   m_ObjectHideFlags: 0
@@ -4612,7 +4615,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiSetter: {fileID: 801563580}
   normalStorySet: {fileID: 11400000, guid: cc5e2cc9660726b498d035529ed5a45a, type: 2}
-  warpZone: {fileID: 0}
   sceneChange: {fileID: 801563582}
 --- !u!114 &582424607 stripped
 MonoBehaviour:
@@ -6433,7 +6435,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   busPrefab: {fileID: 3284635701766062060, guid: a1593f3938e2788478795b97a13caa97, type: 3}
   busSpawn: {fileID: 2071286774}
-  timeSpawn: 10
+  timeSpawn: 60
+  eventStory: {fileID: 11400000, guid: b9bea13c46abc364e9a22e66299de1f5, type: 2}
+  storyStart: {fileID: 801563583}
+  playTextNumber: 0
   currentTime: 0
 --- !u!114 &801563582
 MonoBehaviour:
@@ -14839,6 +14844,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setUiActive: {fileID: 801563580}
+  setEvent: {fileID: 801563583}
+  storyData: {fileID: 11400000, guid: b9bea13c46abc364e9a22e66299de1f5, type: 2}
 --- !u!1 &1765798833
 GameObject:
   m_ObjectHideFlags: 0
@@ -16547,6 +16554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   story: {fileID: 801563583}
   storySetter: {fileID: 11400000, guid: cc5e2cc9660726b498d035529ed5a45a, type: 2}
+  storyCheckNumber: 0
 --- !u!54 &1977272672
 Rigidbody:
   m_ObjectHideFlags: 0
