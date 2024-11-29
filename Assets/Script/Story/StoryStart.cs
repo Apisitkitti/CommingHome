@@ -7,11 +7,10 @@ public class StoryStart : MonoBehaviour
 {
   [SerializeField] TMP_Text storyText;
   [SerializeField] storyInside lines;
-  [SerializeField] float textSpeed;
   [SerializeField] float uiDisappear;
   [SerializeField] DeathStorySet normalStory;
   [SerializeField] GameObject storyUi;
-  public int storyNumber;
+  [HideInInspector] public int storyNumber;
   int dialogueNumber;
 
   void Start()
@@ -37,7 +36,6 @@ public class StoryStart : MonoBehaviour
   {
     string story = lines.storyLine[dialogueNumber];
     setText(story);
-    yield return new WaitForSeconds(textSpeed);
     yield return new WaitForSeconds(uiDisappear);
     storyUi.SetActive(false);
     normalStory.storyCheck[dialogueNumber] = false;
