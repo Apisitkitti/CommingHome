@@ -2528,6 +2528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OVRGazePointerRight 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3223410652897921254, guid: 723a9140871433c4aae29273f121578b, type: 3}
+      propertyPath: noDepthBufferTesting
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3586848885840607780, guid: 723a9140871433c4aae29273f121578b, type: 3}
       propertyPath: rayTransform
       value: 
@@ -9734,7 +9738,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172113677}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
@@ -13776,7 +13780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1519193135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18982,6 +18986,10 @@ PrefabInstance:
       propertyPath: rayTransform
       value: 
       objectReference: {fileID: 1570318897}
+    - target: {fileID: 8836258113820766953, guid: 6e4a8218ee066374da288e124e95532e, type: 3}
+      propertyPath: performSphereCastForGazepointer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

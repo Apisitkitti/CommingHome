@@ -8,6 +8,9 @@ public class UiSetter : MonoBehaviour
   [SerializeField] GameObject busUIForDontWait;
   [SerializeField] GameObject takeABusUI;
   [SerializeField] GameObject wrapBusButton;
+  [SerializeField] GameObject UIforwarp;
+  [SerializeField] GameObject UiforWarpOntheBridge;
+
 
   public void setBusUI(bool isActive)
   {
@@ -22,5 +25,13 @@ public class UiSetter : MonoBehaviour
   public void setOverAllBusUi(bool isActive)
   {
     wrapBusButton.SetActive(isActive);
+  }
+  public void underTheBridegeUi(bool isActive)
+  {
+    UIforwarp.SetActive(isActive);
+  }
+  public void OnTheBridegeUi(bool isActive)
+  {
+    UiforWarpOntheBridge.SetActive(isActive);
   }
 }

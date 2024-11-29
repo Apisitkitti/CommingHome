@@ -7,17 +7,8 @@ public class hitCheck : MonoBehaviour
 {
   [SerializeField] UiSetter uiSetter;
   [SerializeField] DeathStorySet normalStorySet;
-  [SerializeField] Transform warpZone;
-  [SerializeField]
-  SceneManage sceneChange;
+  [SerializeField] SceneManage sceneChange;
 
-  void Start()
-  {
-    if (warpZone == null)
-    {
-      return;
-    }
-  }
   void OnCollisionEnter(Collision col)
   {
     if (col.gameObject.tag == "Car" || col.gameObject.tag == "Bus")
@@ -45,7 +36,11 @@ public class hitCheck : MonoBehaviour
     }
     if (col.gameObject.tag == "bridgeWarp")
     {
-
+      uiSetter.OnTheBridegeUi(true);
+    }
+    if (col.gameObject.tag == "ontheBridgeWarp")
+    {
+      uiSetter.OnTheBridegeUi(true);
     }
   }
   void OnTriggerExit(Collider col)
@@ -55,11 +50,19 @@ public class hitCheck : MonoBehaviour
       dontWantErrorFunction();
       uiSetter.setOverAllBusUi(false);
     }
+    if (col.gameObject.tag == "bridgeWarp")
+    {
+      uiSetter.underTheBridegeUi(false);
+    }
+    if (col.gameObject.tag == "onTheBridgeWarp")
+    {
+      uiSetter.OnTheBridegeUi(false);
+    }
   }
 
   void dontWantErrorFunction()
   {
     if (uiSetter == null) return;
-    if (warpZone == null) return;
+
   }
 }

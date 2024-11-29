@@ -12,6 +12,8 @@ TagManager:
   - stop
   - leftTurn
   - rightTurn
+  - bridgeWarp
+  - onTheBridgeWarp
   layers:
   - Default
   - TransparentFX
