@@ -6,4 +6,5 @@ using UnityEngine;
 public class storyInside : ScriptableObject
 {
   public List<string> storyLine;
+  public List<string> eventString;
 }

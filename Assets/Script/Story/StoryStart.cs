@@ -11,6 +11,7 @@ public class StoryStart : MonoBehaviour
   [SerializeField] float uiDisappear;
   [SerializeField] DeathStorySet normalStory;
   [SerializeField] GameObject storyUi;
+  public int storyNumber;
   int dialogueNumber;
 
   void Start()
@@ -19,30 +20,31 @@ public class StoryStart : MonoBehaviour
     storyUi.SetActive(false);
   }
 
-  void storySetter()
+  void storySetter(int storyNumber)
   {
-
-    foreach (bool storyIsCheck in normalStory.storyCheck)
+    if (normalStory.storyCheck[storyNumber])
     {
-      if (storyIsCheck) dialogueNumber++;
-      if (dialogueNumber >= lines.storyLine.Count) return;
+      dialogueNumber = storyNumber;
     }
   }
   public void startDialogue()
   {
-    storySetter();
-    storyUi.SetActive(true);
+    storySetter(storyNumber);
     StartCoroutine(typeLine());
 
   }
   IEnumerator typeLine()
   {
-    foreach (char charcterInConversation in lines.storyLine[dialogueNumber])
-    {
-      storyText.text += charcterInConversation;
-      yield return new WaitForSeconds(textSpeed);
-    }
+    string story = lines.storyLine[dialogueNumber];
+    setText(story);
+    yield return new WaitForSeconds(textSpeed);
     yield return new WaitForSeconds(uiDisappear);
     storyUi.SetActive(false);
+    normalStory.storyCheck[dialogueNumber] = false;
+  }
+  public void setText(string story)
+  {
+    storyUi.SetActive(true);
+    storyText.text = story;
   }
 }

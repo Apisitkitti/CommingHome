@@ -7,15 +7,15 @@ public class CheckPoint : MonoBehaviour
 {
   [SerializeField] StoryStart story;
   [SerializeField] DeathStorySet storySetter;
-  int storyNumber = 0;
+  public int storyCheckNumber;
   void OnTriggerEnter(Collider col)
   {
     if (col.gameObject.tag == "Player")
     {
+      story.storyNumber = storyCheckNumber;
       story.startDialogue();
-      storySetter.storyCheck[storyNumber] = true;
-      storyNumber++;
-      Destroy(gameObject);
+      storySetter.storyCheck[story.storyNumber] = true;
+      // Destroy(gameObject);
     }
   }
 
