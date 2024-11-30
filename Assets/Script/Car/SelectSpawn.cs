@@ -21,13 +21,16 @@ public class SelectSpawn : MonoBehaviour
         while (true)
         {
             // เลือกตำแหน่ง Spawn
-            Transform spawnPoint = spawnPoints[currentSpawnIndex];
+            //Transform spawnPoint = spawnPoints[currentSpawnIndex];
+            
+            //Random Spawnpoint
+            Transform spawnPoint = spawnPoints[Random.Range(0,spawnPoints.Length)];
 
             // ใช้ API.AddVehicle พร้อม Callback
             API.AddVehicle(spawnPoint.position, vehicleType);
 
             // หมุนไปยังจุด Spawn ถัดไป
-            currentSpawnIndex = (currentSpawnIndex + 1) % spawnPoints.Length;
+            //currentSpawnIndex = (currentSpawnIndex + 1) % spawnPoints.Length;
 
             yield return new WaitForSeconds(spawnDelay);
         }
