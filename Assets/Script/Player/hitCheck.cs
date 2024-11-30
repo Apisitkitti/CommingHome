@@ -16,7 +16,13 @@ public class hitCheck : MonoBehaviour
       deathStorySet.storyCheck[0] = true;
       SceneManager.LoadScene("DeathScene");
     }
+    if (col.gameObject.tag == "enemy")
+    {
+      deathStorySet.storyCheck[1] = true;
+      SceneManager.LoadScene("DeathScene");
+    }
   }
+
   void OnTriggerEnter(Collider col)
   {
     if (col.gameObject.tag == "StoryHit")
@@ -25,7 +31,7 @@ public class hitCheck : MonoBehaviour
     }
     if (col.gameObject.tag == "hole")
     {
-      deathStorySet.storyCheck[1] = true;
+      deathStorySet.storyCheck[2] = true;
       SceneManager.LoadScene("DeathScene");
     }
     if (col.gameObject.tag == "finalDoor")

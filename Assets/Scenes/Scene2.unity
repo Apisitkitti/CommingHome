@@ -8882,7 +8882,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820734672}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.43}
+  m_LocalPosition: {x: 0, y: 0, z: 2.130001}
   m_LocalScale: {x: 0.16999999, y: 0.16999999, z: 0.16999999}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -8892,7 +8892,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.26, y: -0.47}
+  m_AnchoredPosition: {x: -0.26, y: 0}
   m_SizeDelta: {x: 45.4926, y: 5.2844}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &829710224
@@ -22115,7 +22115,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: cc5e2cc9660726b498d035529ed5a45a, type: 2}
     - target: {fileID: 737300756099939080, guid: cd22b0fac9784d14d98e16dc1493af10, type: 3}
       propertyPath: uiDisappear
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 737300756099939080, guid: cd22b0fac9784d14d98e16dc1493af10, type: 3}
       propertyPath: lines.Array.size
