@@ -46,9 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storyText: {fileID: 0}
-  checkPoint: {fileID: 0}
-  lines: test test test
-  textSpeed: 1
+  lines: {fileID: 0}
+  uiDisappear: 4
+  normalStory: {fileID: 0}
+  storyUi: {fileID: 0}
+  storyNumber: 0
 --- !u!114 &8693938090316290114
 MonoBehaviour:
   m_ObjectHideFlags: 0
