@@ -13,10 +13,7 @@ public class hitCheck : MonoBehaviour
   {
     if (col.gameObject.tag == "Car" || col.gameObject.tag == "Bus")
     {
-      for (int storySet = 0; storySet < normalStorySet.storyCheck.Count; storySet++)
-      {
-        normalStorySet.storyCheck[storySet] = false;
-      }
+      normalStorySet.storyCheck[0] = true;
       SceneManager.LoadScene("DeathScene");
     }
   }
