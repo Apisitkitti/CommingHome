@@ -22,6 +22,6 @@ public class SceneManage : MonoBehaviour
   public void backToStart()
   {
     sceneNumber.sceneNumber = 0;
-    SceneManager.LoadScene(sceneNumber.sceneNumber);
+    SceneManager.LoadScene(0);
   }
 }

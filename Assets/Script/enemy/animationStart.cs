@@ -7,25 +7,22 @@ public class animationStart : MonoBehaviour
 {
   [SerializeField] Animator homelessPlay;
   [SerializeField] SplineAnimate walkNow;
-  [SerializeField] CapsuleCollider enemyCap;
 
+  [SerializeField] CapsuleCollider cap;
   void Start()
   {
     walkNow.enabled = false;
-    enemyCap.enabled = false;
+    cap.enabled = false;
   }
   void OnTriggerEnter(Collider playerCol)
   {
     if (playerCol.gameObject.tag == "Player")
     {
       walkNow.enabled = true;
-      enemyCap.enabled = true;
+      cap.enabled = true;
       homelessPlay.SetTrigger("walk");
 
     }
-    if (playerCol.gameObject.tag == "enemy")
-    {
-      homelessPlay.SetTrigger("stand");
-    }
+
   }
 }

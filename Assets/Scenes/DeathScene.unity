@@ -833,6 +833,7 @@ MonoBehaviour:
   deathImageBackground:
   - {fileID: 21300000, guid: d43618060b333e344a1af220fe66a5ee, type: 3}
   - {fileID: 21300000, guid: 8e2b092b7088b9041851e8c455158e5a, type: 3}
+  - {fileID: 21300000, guid: aab9daed9dd934247837683b7ed184ee, type: 3}
   - {fileID: 21300000, guid: 5d82e6d562961a54084da4b604bd5e77, type: 3}
   deathCheck: {fileID: 11400000, guid: 46fa1e148088de044891529acd7351d6, type: 2}
   backGroundDeathimage: {fileID: 59082887}
@@ -1794,6 +1795,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400008, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
   m_PrefabInstance: {fileID: 1130762045}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &951206909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 951206910}
+  m_Layer: 0
+  m_Name: dead2_kill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &951206910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951206909}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &978182629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2299,37 +2331,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!1 &1478838703
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1478838704}
-  m_Layer: 0
-  m_Name: dead1_roadaccident
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1478838704
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478838703}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1519193134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2936,4 +2937,4 @@ SceneRoots:
   - {fileID: 680371910}
   - {fileID: 1979451703}
   - {fileID: 242362960}
-  - {fileID: 1478838704}
+  - {fileID: 951206910}
