@@ -9,11 +9,17 @@ public class hitCheck : MonoBehaviour
   [SerializeField] DeathStorySet deathStorySet;
   [SerializeField] SceneManage sceneChange;
 
+
   void OnCollisionEnter(Collision col)
   {
     if (col.gameObject.tag == "Car" || col.gameObject.tag == "Bus")
     {
       deathStorySet.storyCheck[0] = true;
+      SceneManager.LoadScene("DeathScene");
+    }
+    if (col.gameObject.tag == "enemy")
+    {
+      deathStorySet.storyCheck[1] = true;
       SceneManager.LoadScene("DeathScene");
     }
   }
@@ -25,7 +31,7 @@ public class hitCheck : MonoBehaviour
     }
     if (col.gameObject.tag == "hole")
     {
-      deathStorySet.storyCheck[1] = true;
+      deathStorySet.storyCheck[3] = true;
       SceneManager.LoadScene("DeathScene");
     }
   }
