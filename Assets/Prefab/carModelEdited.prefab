@@ -364,7 +364,7 @@ MonoBehaviour:
   springStiffness: 5
   vehicleType: 0
   minPossibleSpeed: 90
-  maxPossibleSpeed: 120
+  maxPossibleSpeed: 100
   accelerationTime: 10
   distanceToStop: 3
   triggerLength: 4
