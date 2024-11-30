@@ -23,9 +23,6 @@ public class animationStart : MonoBehaviour
       homelessPlay.SetTrigger("walk");
 
     }
-    if (playerCol.gameObject.tag == "enemy")
-    {
-      homelessPlay.SetTrigger("stand");
-    }
+
   }
 }
