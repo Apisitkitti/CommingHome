@@ -22,6 +22,11 @@ public class hitCheck : MonoBehaviour
       deathStorySet.storyCheck[1] = true;
       SceneManager.LoadScene("DeathScene");
     }
+    if (col.gameObject.tag == "enemyType2")
+    {
+      deathStorySet.storyCheck[2] = true;
+      SceneManager.LoadScene("DeathScene");
+    }
   }
   void OnTriggerEnter(Collider col)
   {

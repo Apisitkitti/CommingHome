@@ -12439,6 +12439,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8796440165424256163, guid: 1ca0d83ecf83ee24d984ca81e6f77ae4, type: 3}
+      propertyPath: m_TagString
+      value: enemyType2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12446,6 +12450,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8796440165424256163, guid: 1ca0d83ecf83ee24d984ca81e6f77ae4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2025860137}
+    - targetCorrespondingSourceObject: {fileID: 8796440165424256163, guid: 1ca0d83ecf83ee24d984ca81e6f77ae4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2025860142}
   m_SourcePrefab: {fileID: 100100000, guid: 1ca0d83ecf83ee24d984ca81e6f77ae4, type: 3}
 --- !u!1 &2025860132 stripped
 GameObject:
@@ -12467,6 +12474,29 @@ MonoBehaviour:
   splineContainer: {fileID: 2114502785}
   speed: 2
   speedIncrease: 5.5
+--- !u!136 &2025860142
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025860132}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5904807
+  m_Height: 2.2527423
+  m_Direction: 0
+  m_Center: {x: 8.4155857e-16, y: 1.2220478, z: 0.30921936}
 --- !u!1 &2034148326 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8257360001058918128, guid: 7674dac0a3fb8694490d40f86965e4fc, type: 3}
@@ -13655,7 +13685,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097643212}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54674311eeaa97744874eee1bc1a2028, type: 3}
   m_Name: 

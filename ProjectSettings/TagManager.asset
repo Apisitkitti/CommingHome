@@ -17,6 +17,7 @@ TagManager:
   - hole
   - enemy
   - door
+  - enemyType2
   layers:
   - Default
   - TransparentFX
