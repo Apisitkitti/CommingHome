@@ -4614,7 +4614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiSetter: {fileID: 801563580}
-  normalStorySet: {fileID: 11400000, guid: cc5e2cc9660726b498d035529ed5a45a, type: 2}
+  deathStorySet: {fileID: 11400000, guid: 46fa1e148088de044891529acd7351d6, type: 2}
   sceneChange: {fileID: 801563582}
 --- !u!114 &582424607 stripped
 MonoBehaviour:

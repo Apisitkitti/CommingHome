@@ -21,31 +21,33 @@ public class DeathStory : MonoBehaviour
   [SerializeField] Image coverImage;
   [SerializeField] CanvasGroup canvasGroup;
   [SerializeField] DeathStorySet deathStorySet;
-  public int deathmessageNumber = 0;
-  [HideInInspector] public int deathPictureNumber;
+  [SerializeField] private int deathPictureNumber;
   private Color tempColor;
 
   void Awake()
   {
     tempColor = coverImage.color;
     tempColor.a = 1f;
-    deathStorySetter(deathPictureNumber);
   }
   void Start()
   {
     StartCoroutine(deathMessageStart());
   }
 
-  void deathStorySetter(int deathPictureNumber)
+  void deathStorySetter()
   {
-
-    if (deathStorySet.storyCheck[deathPictureNumber])
+    for (int indexStory = 0; indexStory < deathStorySet.storyCheck.Count; indexStory++)
     {
-      deathmessageNumber = deathPictureNumber;
+      if (deathStorySet.storyCheck[indexStory])
+      {
+        deathPictureNumber = indexStory;
+      }
     }
+
   }
   IEnumerator deathMessageStart()
   {
+    deathStorySetter();
     coverImage.color = Color.black;
     yield return new WaitForSeconds(timeBetweenWord);
     // foreach (char characterInWords in deathMessage[deathmessageNumber])
@@ -53,14 +55,13 @@ public class DeathStory : MonoBehaviour
     //   deathText.text += characterInWords;
     //   yield return new WaitForSeconds(timeBetweenWord);
     // }
-    deathStorySetter(deathPictureNumber);
+
     yield return new WaitForSeconds(wordAppear);
     setDeathImage(deathPictureNumber);
     StartCoroutine(FadePictureDeath());
     yield return new WaitForSeconds(FadeSpeed);
     StartCoroutine(FadeBackMenu());
     // resetDeathDialogueState(false);
-    deathCheck.storyCheck[deathPictureNumber] = false;
 
   }
 
@@ -97,6 +98,7 @@ public class DeathStory : MonoBehaviour
   public void setDeathImage(int deathPictureNumber)
   {
     backGroundDeathimage.sprite = deathImageBackground[deathPictureNumber];
+    deathStorySet.storyCheck[deathPictureNumber] = false;
   }
 }
 

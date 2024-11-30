@@ -48784,7 +48784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiSetter: {fileID: 0}
-  normalStorySet: {fileID: 11400000, guid: 46fa1e148088de044891529acd7351d6, type: 2}
+  deathStorySet: {fileID: 11400000, guid: 46fa1e148088de044891529acd7351d6, type: 2}
   sceneChange: {fileID: 295923558}
 --- !u!1 &1548858204
 GameObject:

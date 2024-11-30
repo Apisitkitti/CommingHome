@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 public class hitCheck : MonoBehaviour
 {
   [SerializeField] UiSetter uiSetter;
-  [SerializeField] DeathStorySet normalStorySet;
+  [SerializeField] DeathStorySet deathStorySet;
   [SerializeField] SceneManage sceneChange;
 
   void OnCollisionEnter(Collision col)
   {
     if (col.gameObject.tag == "Car" || col.gameObject.tag == "Bus")
     {
-      normalStorySet.storyCheck[0] = true;
+      deathStorySet.storyCheck[0] = true;
       SceneManager.LoadScene("DeathScene");
     }
   }
@@ -23,7 +23,13 @@ public class hitCheck : MonoBehaviour
     {
       sceneChange.nextScene();
     }
+    if (col.gameObject.tag == "hole")
+    {
+      deathStorySet.storyCheck[1] = true;
+      SceneManager.LoadScene("DeathScene");
+    }
   }
+
   void OnTriggerStay(Collider col)
   {
     if (col.gameObject.tag == "HitBox")
