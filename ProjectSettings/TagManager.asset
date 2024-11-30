@@ -15,6 +15,7 @@ TagManager:
   - bridgeWarp
   - onTheBridgeWarp
   - hole
+  - enemy
   layers:
   - Default
   - TransparentFX
