@@ -19,4 +19,9 @@ public class SceneManage : MonoBehaviour
     sceneNumber.sceneNumber -= 1;
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
   }
+  public void backToStart()
+  {
+    sceneNumber.sceneNumber = 0;
+    SceneManager.LoadScene(0);
+  }
 }

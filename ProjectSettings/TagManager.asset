@@ -16,6 +16,7 @@ TagManager:
   - onTheBridgeWarp
   - hole
   - enemy
+  - door
   layers:
   - Default
   - TransparentFX
