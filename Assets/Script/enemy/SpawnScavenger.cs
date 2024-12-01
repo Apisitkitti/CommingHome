@@ -5,7 +5,6 @@ using UnityEngine.Events;
 public class SpawnScavenger : MonoBehaviour
 {
     [SerializeField] UnityEvent onTriggerEnter;
-    [SerializeField] UnityEvent onTriggerExit;
 
     void OnTriggerEnter(Collider other)
     {   
@@ -15,8 +14,5 @@ public class SpawnScavenger : MonoBehaviour
         
     }
 
-    /*private void OnTriggerExit(Collider other)
-    {
-        onTriggerExit.Invoke();
-    }*/
+    
 }

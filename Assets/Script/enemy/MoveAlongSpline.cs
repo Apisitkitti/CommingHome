@@ -8,13 +8,9 @@ public class MoveAlongSpline : MonoBehaviour
     [SerializeField] private SplineContainer splineContainer; // ตัว Spline ที่ต้องการให้เดินตาม
     [SerializeField] private float speed = 1f; // ความเร็วเริ่มต้นในการเคลื่อนที่
     [SerializeField] private float speedIncrease = 5f;
-    private Animator animator;
+    [SerializeField] private Animator animatorRun;
     private float progress = 0f; // ตำแหน่งปัจจุบันบน Spline (0-1)
-
-    void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
+  
     void Update()
     {
         if (splineContainer == null) return;
@@ -40,7 +36,12 @@ public class MoveAlongSpline : MonoBehaviour
 
     public void ScavengerHuntMode(){
         speed = speedIncrease;
-        animator.SetBool("IsRunning",true);
     }
+
+    public void SetBoolAni(bool value){
+        animatorRun.SetBool("IsRunning",value);
+    }
+
+
 }
 
