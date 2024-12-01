@@ -24329,7 +24329,7 @@ MonoBehaviour:
   walkspeed: {fileID: 480482773}
   sceneNumber: {fileID: 11400000, guid: 142680a1983542e488a3e1daf2deb557, type: 2}
   platform: {fileID: 157884988}
-  door: {fileID: 0}
+  door: {fileID: 1566009774}
   numberInList: 0
 --- !u!114 &862493040
 MonoBehaviour:

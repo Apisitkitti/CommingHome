@@ -26,7 +26,7 @@ public class finalStoryScript : MonoBehaviour
     mainText("");
     MainMenuButton.SetActive(true);
     setTextFinal(appearText[1]);
-    setDescription("ขอขอบคุณที่เล่นเกมของเรากหวังว่าทุกคนจะชอบเกมของเรา");
+    setDescription("ขอขอบคุณที่เล่นเกมของเราหวังว่าทุกคนจะชอบเกมของเรา");
   }
   void setTextFinal(string text)
   {
