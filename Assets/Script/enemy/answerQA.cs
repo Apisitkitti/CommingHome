@@ -11,6 +11,7 @@ public class answerQA : MonoBehaviour
   [SerializeField] List<GameObject> answeUI;
   [SerializeField] DeathStorySet scarventureDo;
   [SerializeField] GameObject fieldToactiveAnim;
+  [SerializeField] OVRPlayerController walkspeed;
 
 
   int numberInList;
@@ -34,6 +35,7 @@ public class answerQA : MonoBehaviour
   {
     if (numberInList >= moneyList.Count)
     {
+      walkspeed.Acceleration = 0.1f;
       gameObject.SetActive(false);
     }
     else if (numberInList >= 1 && numberInList <= moneyList.Count)
@@ -52,16 +54,19 @@ public class answerQA : MonoBehaviour
 
   public void dontGiveMoney()
   {
+    walkspeed.Acceleration = 0.1f;
     homeLessAnimator.SetBool("yellActive", true);
   }
   public void triggerLastScene()
   {
     scarventureDo.storyCheck[0] = true;
+    walkspeed.Acceleration = 0.1f;
     homeLessAnimator.SetBool("yellActive", false);
     fieldToactiveAnim.SetActive(false);
   }
   public void dontTellHim()
   {
+    walkspeed.Acceleration = 0.1f;
     homeLessAnimator.SetBool("yellActive", true);
   }
   public void SwapAnswer(bool isAppear)
