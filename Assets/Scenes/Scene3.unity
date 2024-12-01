@@ -20740,6 +20740,7 @@ MonoBehaviour:
   answeUI: []
   scarventureDo: {fileID: 11400000, guid: 1872c65adc25b4a45a078298bb04c2b7, type: 2}
   fieldToactiveAnim: {fileID: 984207629}
+  walkspeed: {fileID: 480482773}
 --- !u!114 &724646719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24057,6 +24058,7 @@ MonoBehaviour:
   answeUI: []
   scarventureDo: {fileID: 0}
   fieldToactiveAnim: {fileID: 0}
+  walkspeed: {fileID: 480482773}
 --- !u!114 &862493040
 MonoBehaviour:
   m_ObjectHideFlags: 0
