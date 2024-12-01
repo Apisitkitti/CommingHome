@@ -13,20 +13,6 @@ public class triggerAnimation : MonoBehaviour
   {
     answerQuestionUi.SetActive(false);
   }
-  void OnTriggerStay(Collider col)
-  {
-    if (col.gameObject.tag == "Player")
-    {
-      homeLessAnimator.SetBool("yellActive", true);
-    }
-  }
-  void OnTriggerExit(Collider col)
-  {
-    if (col.gameObject.tag == "Player")
-    {
-      homeLessAnimator.SetBool("yellActive", false);
-    }
-  }
   void OnTriggerEnter(Collider col)
   {
     if (col.gameObject.tag == "Player")

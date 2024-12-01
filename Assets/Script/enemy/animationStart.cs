@@ -20,6 +20,7 @@ public class animationStart : MonoBehaviour
     {
       walkNow.enabled = true;
       cap.enabled = true;
+      homelessPlay.SetBool("yellActive", false);
       homelessPlay.SetTrigger("walk");
 
     }
