@@ -17,6 +17,7 @@ public class BusSpawn : MonoBehaviour
   void Start()
   {
     currentTime = timeSpawn;
+    storyStart.setText("");
     playTextNumber = timeSpawn - 10;
   }
   void Update()

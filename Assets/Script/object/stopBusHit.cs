@@ -8,6 +8,10 @@ public class stopBusHit : MonoBehaviour
   [SerializeField] StoryStart setEvent;
   [SerializeField] storyInside storyData;
 
+  void Start()
+  {
+    setEvent.setText("");
+  }
   void OnTriggerEnter(Collider col)
   {
     if (col.gameObject.tag == "Bus")

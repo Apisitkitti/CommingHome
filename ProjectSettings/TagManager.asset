@@ -18,6 +18,7 @@ TagManager:
   - enemy
   - door
   - enemyType2
+  - anotherStory
   layers:
   - Default
   - TransparentFX

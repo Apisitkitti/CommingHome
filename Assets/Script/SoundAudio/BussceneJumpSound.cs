@@ -12,6 +12,7 @@ public class BussceneJumpSound : MonoBehaviour
   [SerializeField] private bool JumpScaredSoundPlay = false;
   [SerializeField] StoryStart storyUi;
   [SerializeField] storyInside eventStory;
+  [SerializeField] int timeToTextAppear;
   // Start is called before the first frame update
   void Start()
   {

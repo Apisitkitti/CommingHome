@@ -1223,6 +1223,7 @@ MonoBehaviour:
   JumpScaredSoundPlay: 0
   storyUi: {fileID: 801563583}
   eventStory: {fileID: 11400000, guid: b9bea13c46abc364e9a22e66299de1f5, type: 2}
+  timeToTextAppear: 4
 --- !u!82 &181005605
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3387,103 +3388,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443164389}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &458464251
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 458464255}
-  - component: {fileID: 458464254}
-  - component: {fileID: 458464253}
-  - component: {fileID: 458464256}
-  m_Layer: 0
-  m_Name: Dialogue
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!54 &458464253
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 458464251}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 4
-  m_CollisionDetection: 0
---- !u!65 &458464254
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 458464251}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.9663389, y: 2.814365, z: 1}
-  m_Center: {x: 0.13181564, y: 0.90718246, z: 0}
---- !u!4 &458464255
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 458464251}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.011112811, y: 0.8257546, z: 5.47}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &458464256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 458464251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edd70cff343be864382a935cc200e17a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  story: {fileID: 0}
-  storySetter: {fileID: 0}
-  storyCheckNumber: 0
 --- !u!1 &459064509
 GameObject:
   m_ObjectHideFlags: 0
@@ -6321,7 +6225,7 @@ PrefabInstance:
     - target: {fileID: 737300756099939080, guid: cd22b0fac9784d14d98e16dc1493af10, type: 3}
       propertyPath: checkPoint
       value: 
-      objectReference: {fileID: 458464251}
+      objectReference: {fileID: 0}
     - target: {fileID: 737300756099939080, guid: cd22b0fac9784d14d98e16dc1493af10, type: 3}
       propertyPath: normalStory
       value: 
@@ -9223,6 +9127,10 @@ PrefabInstance:
       propertyPath: walkSound
       value: 
       objectReference: {fileID: 1139666193}
+    - target: {fileID: 11400010, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+      propertyPath: Acceleration
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 11400010, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: SnapRotation
       value: 0
@@ -14850,6 +14758,7 @@ MonoBehaviour:
   setUiActive: {fileID: 801563580}
   setEvent: {fileID: 801563583}
   storyData: {fileID: 11400000, guid: b9bea13c46abc364e9a22e66299de1f5, type: 2}
+  textDisappear: 4
 --- !u!1 &1765798833
 GameObject:
   m_ObjectHideFlags: 0
@@ -19100,7 +19009,6 @@ SceneRoots:
   - {fileID: 269112561}
   - {fileID: 1130762045}
   - {fileID: 97148303}
-  - {fileID: 458464255}
   - {fileID: 1519193136}
   - {fileID: 3789203628726797945}
   - {fileID: 6297116474151975885}

@@ -27,6 +27,7 @@ public class hitCheck : MonoBehaviour
       deathStorySet.storyCheck[2] = true;
       SceneManager.LoadScene("DeathScene");
     }
+
   }
   void OnTriggerEnter(Collider col)
   {
@@ -42,6 +43,10 @@ public class hitCheck : MonoBehaviour
     if (col.gameObject.tag == "door")
     {
       SceneManager.LoadScene("EndScene");
+    }
+    if (col.gameObject.tag == "anotherStory")
+    {
+      sceneChange.Respawn();
     }
   }
 
