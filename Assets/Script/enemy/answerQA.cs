@@ -20,7 +20,7 @@ public class answerQA : MonoBehaviour
   }
   public void moneyChanger1()
   {
-    if (numberInList >= 2)
+    if (numberInList >= moneyList.Count)
     {
       gameObject.SetActive(false);
     }
@@ -32,11 +32,11 @@ public class answerQA : MonoBehaviour
   }
   public void moneyChanger2()
   {
-    if (numberInList >= 2)
+    if (numberInList >= moneyList.Count)
     {
       gameObject.SetActive(false);
     }
-    else if (numberInList >= 1 && numberInList <= 2)
+    else if (numberInList >= 1 && numberInList <= moneyList.Count)
     {
       moneyText.text = $"ขอเงินหน่อย{moneyList[numberInList]}";
       numberInList += 1;
