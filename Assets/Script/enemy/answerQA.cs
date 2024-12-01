@@ -23,6 +23,7 @@ public class answerQA : MonoBehaviour
   {
     if (numberInList >= moneyList.Count)
     {
+      walkspeed.Acceleration = 0.1f;
       gameObject.SetActive(false);
     }
     else
@@ -33,7 +34,7 @@ public class answerQA : MonoBehaviour
   }
   public void moneyChanger2()
   {
-    if (numberInList >= moneyList.Count)
+    if (numberInList == moneyList.Count)
     {
       walkspeed.Acceleration = 0.1f;
       gameObject.SetActive(false);
@@ -67,7 +68,7 @@ public class answerQA : MonoBehaviour
   public void dontTellHim()
   {
     walkspeed.Acceleration = 0.1f;
-    homeLessAnimator.SetBool("yellActive", true);
+    homeLessAnimator.ResetTrigger("stand");
   }
   public void SwapAnswer(bool isAppear)
   {
