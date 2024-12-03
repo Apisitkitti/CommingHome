@@ -7,6 +7,6 @@ public class resetSceneNumber : MonoBehaviour
   [SerializeField] checkSceneToRespawn indexScene;
   void Start()
   {
-    indexScene.sceneNumber = 0;
+    indexScene.sceneNumber = 1;
   }
 }
