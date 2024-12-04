@@ -22551,13 +22551,17 @@ PrefabInstance:
       value: TrafficSpawnCar2
       objectReference: {fileID: 0}
     - target: {fileID: 5782091012156986109, guid: fdb61e170a4c87741a0534505b29acd8, type: 3}
+      propertyPath: carPrefab.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782091012156986109, guid: fdb61e170a4c87741a0534505b29acd8, type: 3}
       propertyPath: carPrefab.Array.data[0]
       value: 
-      objectReference: {fileID: 4225410675352136644, guid: 612f1adb902d31444af2c94acd6d8467, type: 3}
+      objectReference: {fileID: 3284635701766062060, guid: a1593f3938e2788478795b97a13caa97, type: 3}
     - target: {fileID: 5782091012156986109, guid: fdb61e170a4c87741a0534505b29acd8, type: 3}
       propertyPath: carPrefab.Array.data[1]
       value: 
-      objectReference: {fileID: 3284635701766062060, guid: a1593f3938e2788478795b97a13caa97, type: 3}
+      objectReference: {fileID: 4225410675352136644, guid: 612f1adb902d31444af2c94acd6d8467, type: 3}
     - target: {fileID: 5782091012156986109, guid: fdb61e170a4c87741a0534505b29acd8, type: 3}
       propertyPath: carSpawner.Array.data[0]
       value: 

@@ -13,7 +13,6 @@ public class answerQA : MonoBehaviour
   [SerializeField] List<GameObject> answeUI;
   [SerializeField] GameObject fieldToactiveAnim;
   [SerializeField] OVRPlayerController walkspeed;
-  [SerializeField] checkSceneToRespawn sceneNumber;
   [SerializeField] GameObject platform;
   [SerializeField] GameObject door;
 
@@ -67,7 +66,6 @@ public class answerQA : MonoBehaviour
   }
   public void triggerLastScene()
   {
-    sceneNumber.sceneNumber = 4;
     walkspeed.Acceleration = 0.08f;
     homeLessAnimator.SetBool("yellActive", false);
     fieldToactiveAnim.SetActive(false);

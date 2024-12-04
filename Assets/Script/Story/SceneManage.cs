@@ -24,4 +24,9 @@ public class SceneManage : MonoBehaviour
     sceneNumber.sceneNumber = 0;
     SceneManager.LoadScene(sceneNumber.sceneNumber);
   }
+  public void next2Scene()
+  {
+    sceneNumber.sceneNumber += 2;
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+  }
 }

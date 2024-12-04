@@ -46,7 +46,7 @@ public class hitCheck : MonoBehaviour
     }
     if (col.gameObject.tag == "anotherStory")
     {
-      sceneChange.Respawn();
+      sceneChange.next2Scene();
     }
   }
 
