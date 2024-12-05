@@ -76,7 +76,7 @@ public class answerQA : MonoBehaviour
   public void dontTellHim()
   {
     walkspeed.Acceleration = 0.08f;
-    homeLessAnimator.ResetTrigger("stand");
+    homeLessAnimator.SetBool("stand", false);
     Destroy(platform);
     Destroy(gameObject);
   }

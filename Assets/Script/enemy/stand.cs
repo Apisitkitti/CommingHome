@@ -10,7 +10,7 @@ public class stand : MonoBehaviour
   {
     if (col.gameObject.tag == "Player")
     {
-      standTrack.SetTrigger("stand");
+      standTrack.SetBool("stand", true);
     }
   }
 }

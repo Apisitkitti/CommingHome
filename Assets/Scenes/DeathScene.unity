@@ -1637,8 +1637,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 357223830}
-        m_TargetAssemblyTypeName: BackMenu, Assembly-CSharp
-        m_MethodName: Respawn
+        m_TargetAssemblyTypeName: SceneManage, Assembly-CSharp
+        m_MethodName: backToStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

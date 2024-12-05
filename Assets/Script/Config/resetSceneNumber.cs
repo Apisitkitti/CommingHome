@@ -5,8 +5,9 @@ using UnityEngine;
 public class resetSceneNumber : MonoBehaviour
 {
   [SerializeField] checkSceneToRespawn indexScene;
+  [SerializeField] int sceneNumber;
   void Start()
   {
-    indexScene.sceneNumber = 1;
+    indexScene.sceneNumber = sceneNumber;
   }
 }
