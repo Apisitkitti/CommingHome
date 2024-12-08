@@ -15,7 +15,7 @@ public class answerQA : MonoBehaviour
   [SerializeField] OVRPlayerController walkspeed;
   [SerializeField] GameObject platform;
   [SerializeField] GameObject door;
-
+  [SerializeField] AudioSource[] audiosource;
   [SerializeField] int numberInList;
   void Start()
   {
@@ -61,6 +61,7 @@ public class answerQA : MonoBehaviour
   {
     walkspeed.Acceleration = 0.08f;
     homeLessAnimator.SetBool("yellActive", true);
+    audiosource[0].Play(); // Play sound Yelling
     Destroy(platform);
     Destroy(gameObject);
   }
@@ -68,6 +69,7 @@ public class answerQA : MonoBehaviour
   {
     walkspeed.Acceleration = 0.08f;
     homeLessAnimator.SetBool("yellActive", false);
+    audiosource[1].Stop(); // Stop sound breathing
     fieldToactiveAnim.SetActive(false);
     door.SetActive(true);
     Destroy(platform);
