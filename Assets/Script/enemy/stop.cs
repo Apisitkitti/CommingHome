@@ -10,7 +10,8 @@ public class stop : MonoBehaviour
   {
     if (playerCol.gameObject.tag == "enemy")
     {
-      homelessPlay.SetTrigger("stand");
+      homelessPlay.ResetTrigger("walk");
+      homelessPlay.SetBool("stand", true);
     }
   }
 }
